@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-size='60' font-family='Arial,sans-serif' font-weight='bold' text-anchor='middle' fill='white'>G</text></svg>">
+    <title>วริษา เทียมทอง | Software Engineer</title>
+    <meta name="description" content="พอร์ตโฟลิโอของวริษา เทียมทอง (Garfair) วิศวกรซอฟต์แวร์เชี่ยวชาญด้าน Golang, Vue.js และ Industrial Automation">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">Garfair<span style="color: var(--primary-light)">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">เกี่ยวกับ</a></li>
+                <li><a href="#experience">ประสบการณ์</a></li>
+                <li><a href="#projects">ผลงาน</a></li>
+                <li><a href="#skills">ทักษะ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+            <div style="display: flex; gap: 0.8rem; align-items: center;">
+                <a href="index.html" class="lang-btn">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">จ้างฉัน</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <header class="hero container">
+        <div class="hero-content">
+            <div class="status-badge">
+                <i class="fas fa-circle" style="font-size: 0.5rem"></i>
+                พร้อมรับโอกาสใหม่
+            </div>
+            <h1>วริษา <br><span style="color: var(--primary-light)">เทียมทอง</span></h1>
+            <p>Full-stack Developer ที่หลงใหลในการพัฒนาเว็บแอปพลิเคชัน แพลตฟอร์ม AI และโซลูชันระบบอัตโนมัติในโรงงานอุตสาหกรรม</p>
+            <div class="hero-actions" style="display: flex; gap: 1.5rem;">
+                <a href="#projects" class="btn btn-primary">ดูผลงาน</a>
+                <a href="Resume_Warisa(THA R).pdf" class="btn btn-outline" target="_blank" style="padding: 1rem 2.5rem; text-decoration: none; border: 1px solid var(--glass-border); border-radius: 12px; font-weight: 600;">ดาวน์โหลด CV</a>
+            </div>
+        </div>
+        <div class="hero-image" style="flex: 0.7; display: flex; justify-content: flex-end;">
+            <div class="profile-frame">
+                <div class="profile-glow"></div>
+                <img src="IMG_2376.PNG" alt="วริษา - Professional" class="profile-photo active" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="D6DF40E2-F0D4-4B12-97FA-8A5ADE73D396.JPG" alt="วริษา - Casual" class="profile-photo" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="CFD901D7-F137-4C58-8512-0ACD53A4EC62.JPG" alt="วริษา - Outdoor" class="profile-photo" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                <div class="profile-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="container reveal">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 class="section-title">เกี่ยวกับฉัน</h2>
+            <p style="font-size: 1.2rem; color: var(--text-gray); line-height: 1.8;">
+                นักศึกษาชั้นปีสุดท้าย สาขา IT จาก มจธ. มีประสบการณ์จริงจากการฝึกงานและพัฒนาซอฟต์แวร์แบบ Outsource 
+                ทั้งด้าน Web Application, Automation และ Robotics หลงใหลในการออกแบบระบบ ตั้งแต่ CI/CD Pipeline, 
+                Monitoring ด้วย Grafana ไปจนถึง Security Testing ด้วย OWASP ZAP 
+                สำหรับดิฉัน AI คือตัวช่วยทางความคิดที่ขยายศักยภาพมนุษย์ ไม่ใช่สิ่งทดแทน
+            </p>
+            <div style="display: flex; gap: 3rem; justify-content: center; margin-top: 4rem; margin-bottom: 4rem;">
+                <div style="padding: 1rem;">
+                    <h3 style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 0.5rem;">KMUTT</h3>
+                    <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted);">การศึกษา</p>
+                </div>
+                <div style="padding: 1rem;">
+                    <h3 style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 0.5rem;">6+</h3>
+                    <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted);">โปรเจกต์</p>
+                </div>
+                <div style="padding: 1rem;">
+                    <h3 style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 0.5rem;">AI</h3>
+                    <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted);">เน้นเทคโนโลยี</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE & EDUCATION ==================== -->
+    <section id="experience" class="container reveal">
+        <h2 class="section-title">ประวัติการทำงานและการศึกษา</h2>
+        <div class="experience-timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: var(--primary-light)">การศึกษา (ปริญญาตรี)</h3>
+                            <h4 style="margin-top: 5px;">King Mongkut's University of Technology Thonburi (KMUTT)</h4>
+                        </div>
+                        <span style="color: var(--text-muted)">2022 - 2026</span>
+                    </div>
+                    <p style="color: var(--text-gray);">คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) ชั้นปีที่ 4</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: var(--primary-light)">Software Developer Intern</h3>
+                            <h4 style="margin-top: 5px;">Lin Sugar (Sugar Factory Enterprise System)</h4>
+                        </div>
+                        <span style="color: var(--text-muted)">Jan 2025 - Jul 2025</span>
+                    </div>
+                    <ul style="margin-left: 1.5rem; color: var(--text-gray); font-size: 0.95rem;">
+                        <li>พัฒนา Enterprise System ขนาดใหญ่ (Full SDLC) สำหรับโรงงานน้ำตาล</li>
+                        <li>Backend: C# (.NET) | Mobile: Flutter | Database: SQL Server</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: flex-start;">
+                        <div>
+                            <h3 style="color: var(--primary-light)">Software Engineer (Part-time)</h3>
+                            <h4 style="margin-top: 5px;">Automate-2015 (Robotics & Automation)</h4>
+                        </div>
+                        <span style="color: var(--text-muted)">Oct 2025 - ปัจจุบัน</span>
+                    </div>
+                    <ul style="margin-left: 1.5rem; color: var(--text-gray); font-size: 0.95rem;">
+                        <li>ออกแบบระบบ Machine Vision (C#, VB) สำหรับแขนกลและการควบคุมระบบอัตโนมัติ</li>
+                        <li>พัฒนาซอฟต์แวร์ควบคุมเพื่อเพิ่มประสิทธิภาพในกระบวนการผลิต</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="container reveal">
+        <h2 class="section-title">ผลงานทั้งหมด</h2>
+        <div class="grid-3">
+            <div class="glass-card project-card">
+                <span style="font-size: 0.7rem; color: var(--primary-light); font-weight: 800; letter-spacing: 1px; margin-bottom: 1rem; display: block;">GRADUATION PROJECT</span>
+                <h3>JOB SPARK</h3>
+                <p class="project-desc">Secure Job Matching Web Application</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>พัฒนา Backend ด้วย Golang (Fiber) พร้อม RESTful API กว่า 40 endpoints</li>
+                    <li>เชื่อมต่อ Firebase Authentication (OAuth2/OpenID) พร้อม ID token verification และ role-based authorization</li>
+                    <li>สร้างระบบตรวจสอบสิทธิ์การเข้าถึงข้อมูลและบังคับใช้กฎทางธุรกิจภายใน API layers</li>
+                    <li>ออกแบบโครงสร้างระบบแบบ Scalable รองรับ authentication workflows ที่ปลอดภัย</li>
+                    <li>ทดสอบระบบอัตโนมัติเพื่อรับรองความน่าเชื่อถือและบำรุงรักษาง่าย</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Golang</span> <span class="tag">Fiber</span> <span class="tag">Firebase</span> <span class="tag">OAuth2</span>
+                </div>
+                <a href="https://github.com/WarisaTT/jobspark-project" target="_blank" style="margin-top: 1rem; display: inline-block; color: var(--primary-light); text-decoration: none; font-weight: 600;"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+
+            <div class="glass-card project-card">
+                <span style="font-size: 0.7rem; color: var(--accent); font-weight: 800; letter-spacing: 1px; margin-bottom: 1rem; display: block;">AI INTEGRATED</span>
+                <h3>PLOY KONG</h3>
+                <p class="project-desc">AI-Integrated Portfolio Platform</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>สร้าง No-Code portfolio builder ด้วย Go (Fiber), Vue.js 3 และ Flutter</li>
+                    <li>เชื่อมต่อ LLM APIs หลายตัว (OpenAI, Claude, Gemini) สำหรับ AI content generation, resume scoring และ interview coaching</li>
+                    <li>ออกแบบ RESTful APIs ด้วย JWT authentication, MySQL 8 และ Redis สำหรับ session management</li>
+                    <li>Deploy ด้วย Docker Compose, Nginx reverse proxy, SSL (Certbot) และ CI/CD (GitHub Actions)</li>
+                    <li>สร้างฟีเจอร์ One-Click publishing, PDF export, visitor analytics และ push notifications</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Go</span> <span class="tag">Vue.js 3</span> <span class="tag">Flutter</span> <span class="tag">LLM</span> <span class="tag">Docker</span>
+                </div>
+                <a href="https://github.com/WarisaTT/PloyKong" target="_blank" style="margin-top: 1rem; display: inline-block; color: var(--primary-light); text-decoration: none; font-weight: 600;"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+
+            <div class="glass-card project-card">
+                <h3>KRADANKANBAN</h3>
+                <p class="project-desc">Web Application</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>พัฒนา Full-stack Kanban web application ด้วย Java Servlets, JavaScript, HTML และ CSS</li>
+                    <li>ออกแบบระบบสร้าง task, จัดการ priority และ workflow tracking</li>
+                    <li>วาง Backend logic แบบ servlet-based architecture จัดการ data flow ระหว่าง frontend-backend</li>
+                    <li>ออกแบบ UX/UI prototypes บน Figma เพื่อปรับปรุง usability</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Java</span> <span class="tag">Servlets</span> <span class="tag">Figma</span>
+                </div>
+                <a href="https://github.com/WarisaTT/kradankanban-project" target="_blank" style="margin-top: 1rem; display: inline-block; color: var(--primary-light); text-decoration: none; font-weight: 600;"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+
+            <div class="glass-card project-card">
+                <span style="font-size: 0.7rem; color: var(--text-gray); font-weight: 800; letter-spacing: 1px; margin-bottom: 1rem; display: block;">INDUSTRIAL</span>
+                <h3>ROBOTICS VISION SYSTEM</h3>
+                <p class="project-desc">Industrial Automation Project</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>พัฒนาระบบตรวจจับวัตถุด้วย pattern matching สำหรับ object recognition และ XY coordinate mapping</li>
+                    <li>ปรับแต่งการประมวลผลภาพสำหรับชิ้นส่วนโลหะสะท้อนแสงสูง พร้อมทดสอบในโรงงานจริง</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">C#</span> <span class="tag">VB</span> <span class="tag">Machine Vision</span>
+                </div>
+            </div>
+
+            <div class="glass-card project-card">
+                <h3>TRRCORP-BION</h3>
+                <p class="project-desc">Bio-Energy Purchasing System</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>พัฒนา Backend services ด้วย C# (.NET) กับ SQL Server ออกแบบ stored procedures และระบบแจ้งเตือนอัตโนมัติ</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">C# (.NET)</span> <span class="tag">SQL Server</span>
+                </div>
+            </div>
+
+            <div class="glass-card project-card">
+                <h3>TRRCORP-OLS</h3>
+                <p class="project-desc">Outbound Logistics Mobile System</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>พัฒนาแอปมือถือด้วย Flutter เชื่อมต่อ .NET backend APIs จัดการ weight-in/weight-out และคำนวณน้ำหนักสุทธิ</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Flutter</span> <span class="tag">.NET API</span>
+                </div>
+            </div>
+
+            <div class="glass-card project-card">
+                <h3>CLICK WORD</h3>
+                <p class="project-desc">Web-Based Educational Game</p>
+                <ul style="margin: 1rem 0; margin-left: 1.2rem; color: var(--text-gray); font-size: 0.85rem;">
+                    <li>พัฒนาเกมคำศัพท์บนบราวเซอร์ด้วย HTML, CSS และ JavaScript พร้อมระบบจับคู่และเก็บคะแนน</li>
+                    <li>ออกแบบ UX/UI ที่เน้นความสนุก เข้าถึงง่าย และหน้าตาสะอาด</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">JavaScript</span> <span class="tag">HTML/CSS</span> <span class="tag">UX/UI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="container reveal">
+        <h2 class="section-title">ทักษะทางเทคนิค</h2>
+        <div class="skills-grid-detailed">
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend & System Architecture</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fab fa-golang" style="color: #00ADD8"></i> Golang (Fiber)</span>
+                    <span class="sub-tag"><i class="fab fa-microsoft" style="color: #512BD4"></i> C# (.NET 8)</span>
+                    <span class="sub-tag"><i class="fab fa-java" style="color: #007396"></i> Java Spring Boot</span>
+                    <span class="sub-tag"><i class="fas fa-project-diagram"></i> RESTful API Design</span>
+                    <span class="sub-tag"><i class="fas fa-cubes"></i> MVC Architecture</span>
+                    <span class="sub-tag"><i class="fas fa-network-wired"></i> Scalable System Design</span>
+                    <span class="sub-tag"><i class="fas fa-map"></i> API Structure Planning</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Database & Data Engineering</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fas fa-database" style="color: #F80000"></i> SQL Server</span>
+                    <span class="sub-tag"><i class="fas fa-database" style="color: #4479A1"></i> MySQL 8 (JSON)</span>
+                    <span class="sub-tag"><i class="fas fa-bolt" style="color: #DC382D"></i> Redis (Cache/Rate Limit)</span>
+                    <span class="sub-tag"><i class="fas fa-code"></i> Stored Procedures</span>
+                    <span class="sub-tag"><i class="fas fa-sitemap"></i> ER Diagram Design</span>
+                    <span class="sub-tag"><i class="fas fa-tachometer-alt"></i> Query Optimization</span>
+                    <span class="sub-tag"><i class="fas fa-check-double"></i> Data Validation</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Auth, Security & API Governance</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fas fa-key"></i> OAuth2 / OpenID Connect</span>
+                    <span class="sub-tag"><i class="fas fa-user-lock"></i> JWT Authentication</span>
+                    <span class="sub-tag"><i class="fas fa-fire" style="color: #FFCA28"></i> Firebase Auth</span>
+                    <span class="sub-tag"><i class="fas fa-fingerprint"></i> Token Verification</span>
+                    <span class="sub-tag"><i class="fas fa-user-tag"></i> RBAC</span>
+                    <span class="sub-tag"><i class="fas fa-lock"></i> Secure API Principles</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Robotics & Industrial Automation</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fas fa-camera"></i> Camera Programming</span>
+                    <span class="sub-tag"><i class="fas fa-eye"></i> Vision Machine & Pattern Matching</span>
+                    <span class="sub-tag"><i class="fas fa-tools"></i> Robot Training & Calibration</span>
+                    <span class="sub-tag"><i class="fas fa-crosshairs"></i> XY Coordinate Positioning</span>
+                    <span class="sub-tag"><i class="fas fa-industry"></i> System Integration</span>
+                    <span class="sub-tag"><i class="fas fa-cogs"></i> Factory Deployment</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Full Stack & System Integration</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fab fa-html5" style="color: #E34F26"></i> HTML/CSS/JS</span>
+                    <span class="sub-tag"><i class="fab fa-vuejs" style="color: #4FC08D"></i> Vue.js 3 (Pinia)</span>
+                    <span class="sub-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="#00ADD8" xmlns="http://www.w3.org/2000/svg"><path d="M14.314 0L2.3 12L6 15.7L21.7 0H14.314V0ZM21.7 9.5L10.5 20.7L6.8 17L21.7 2.1V9.5Z"/></svg> Flutter</span>
+                    <span class="sub-tag"><i class="fab fa-figma" style="color: #F24E1E"></i> UX/UI (Figma)</span>
+                    <span class="sub-tag"><i class="fab fa-docker" style="color: #2496ED"></i> Docker Compose</span>
+                    <span class="sub-tag"><i class="fas fa-server"></i> Nginx</span>
+                    <span class="sub-tag"><i class="fab fa-github"></i> CI/CD (GitHub Actions)</span>
+                    <span class="sub-tag"><i class="fas fa-cloud"></i> Vercel / Railway</span>
+                    <span class="sub-tag"><i class="fas fa-envelope-open-text" style="color: #FF6C37"></i> Postman</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <h3>AI Tools & Prompt Engineering</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fas fa-brain"></i> LLM API (OpenAI, Gemini)</span>
+                    <span class="sub-tag"><i class="fab fa-github"></i> GitHub Copilot</span>
+                    <span class="sub-tag"><i class="fas fa-robot"></i> Claude / Antigravity</span>
+                    <span class="sub-tag"><i class="fas fa-magic"></i> Workflow Automation</span>
+                    <span class="sub-tag"><i class="fas fa-lightbulb"></i> Notion AI / Grammarly</span>
+                    <span class="sub-tag"><i class="fas fa-search"></i> Perplexity</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Professional Skills</h3>
+                </div>
+                <div class="sub-skills">
+                    <span class="sub-tag"><i class="fas fa-users"></i> Cross-functional Teamwork</span>
+                    <span class="sub-tag"><i class="fas fa-comments"></i> Technical Communication</span>
+                    <span class="sub-tag"><i class="fas fa-person-chalkboard"></i> Client Presentation</span>
+                    <span class="sub-tag"><i class="fas fa-sync"></i> Fast-Paced Adaptability</span>
+                    <span class="sub-tag"><i class="fas fa-crown"></i> Leadership & Ownership</span>
+                    <span class="sub-tag"><i class="fas fa-seedling"></i> Growth Mindset</span>
+                    <span class="sub-tag"><i class="fas fa-brain"></i> AI Tools Integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section id="certifications" class="container reveal">
+        <h2 class="section-title">ใบรับรอง</h2>
+        <div class="grid-3">
+            <div class="glass-card" style="padding: 2rem;">
+                <i class="fas fa-graduation-cap" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 1rem;"></i>
+                <h3 style="font-size: 1.1rem;">Gemini Certified Educator</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Google Cloud Certification สำหรับการเพิ่มประสิทธิภาพ Workflow ด้วย AI</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <i class="fas fa-certificate" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 1rem;"></i>
+                <h3 style="font-size: 1.1rem;">Gemini Certified Faculty</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">การนำ AI ไปใช้อย่างมีกลยุทธ์และรับผิดชอบ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="container reveal">
+        <h2 class="section-title">ติดต่อ</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--primary-light); text-transform: uppercase; font-weight: 800;">Email</p>
+                        <p style="font-size: 1.1rem; color: var(--text-white);">fair2708@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--primary-light); text-transform: uppercase; font-weight: 800;">Phone</p>
+                        <p style="font-size: 1.1rem; color: var(--text-white);">097-094-8781</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--primary-light); text-transform: uppercase; font-weight: 800;">Location</p>
+                        <p style="font-size: 1.1rem; color: var(--text-white);">ปทุมธานี, ประเทศไทย</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">เปิดรับความท้าทายและโอกาสใหม่ๆ</h3>
+                <a href="mailto:fair2708@gmail.com" class="btn btn-primary" style="padding: 1.2rem 3rem;">เริ่มต้นพูดคุย</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer style="padding: 3rem 0; border-top: 1px solid var(--glass-border); margin-top: 4rem;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 วริษา เทียมทอง. Built for GitHub Pages.</p>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://github.com/WarisaTT" target="_blank" style="color: inherit; text-decoration: none;"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/warisa-thiamthong/" target="_blank" style="color: inherit; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

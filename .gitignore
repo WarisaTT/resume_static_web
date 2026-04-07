@@ -1,0 +1,69 @@
+# ===== Personal / Sensitive Files =====
+*.pdf
+*.docx
+*.xlsx
+*.HEIC
+Gemini_Generated*
+IMG_2376 2.png
+CERTIFICATE_LANDING*
+ploykong*
+resume A4*
+
+# Bank slips & personal documents
+IMG_0227.*
+IMG_0228.*
+IMG_0239.*
+IMG_0240.*
+IMG_0248.*
+IMG_0249.*
+สำเนา*
+แบบฟอร์ม*
+เอกสาร*
+Book1.xlsx
+
+# Screenshot files
+Screenshot*
+
+# Unused images / assets
+1.jpg
+2.jpg
+resume*
+Untitled*
+Template.png
+Rectangle*
+Group*
+blue.png
+green.png
+red.png
+yellow.png
+Preeyawat*
+Example*
+PloyKong*
+Promo/
+final Resume/
+
+# Logos (using FontAwesome instead)
+Csharp_Logo.png
+IntelliJ_IDEA_Icon*
+MongoDB_Logo*
+Node.js_logo*
+java-logo*
+microsoft-sql*
+tableau*
+flutter-logo*
+
+# Misc
+.DS_Store
+~$*
+*.svg
+c722e0db*
+cover_letter*
+65130500117*
+CV -*
+email.png
+phone-call.png
+instagram.png
+linkedin*
+github.png
+git6963.jpg
+8057863.png
