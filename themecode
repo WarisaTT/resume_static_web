@@ -440,6 +440,7 @@ section {
 
 
 /* Contact */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -494,19 +495,6 @@ section {
     transform: scale(1.05);
 }
 
-.btn-outline {
-    border: 1px solid var(--glass-border);
-    color: var(--text-white);
-    background: transparent;
-    padding: 1rem 2.5rem;
-}
-
-.btn-outline:hover {
-    background: var(--glass-border);
-    border-color: var(--primary-light);
-    color: var(--primary-light);
-}
-
 /* ==================== Tablet ==================== */
 @media (max-width: 1024px) {
     .hero {
@@ -523,20 +511,13 @@ section {
         justify-content: center !important;
     }
 
-    /* Better visibility for outline buttons on mobile (Supports both themes) */
-    .btn-outline {
-        border: 1px solid var(--glass-border) !important;
-        color: var(--text-white) !important;
-        background: var(--bg-card) !important;
-        backdrop-filter: blur(4px);
+    .hero-actions {
+        justify-content: center;
     }
 
     .hero p {
         margin-left: auto;
         margin-right: auto;
-        font-size: 1rem;
-        line-height: 1.6;
-        padding: 0 0.5rem;
     }
 
     .status-badge {
@@ -562,10 +543,10 @@ section {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 1.2rem;
+        gap: 2rem;
         min-height: auto;
-        padding-top: 140px !important; /* Forces enough space on any mobile device */
-        padding-bottom: 2rem;
+        padding-top: calc(var(--nav-height) + 4rem); /* Increased from 1.5rem to 4rem to clear fixed nav */
+        padding-bottom: 3rem;
     }
 
     .hero-content {
@@ -581,11 +562,10 @@ section {
     }
 
     .hero h1 {
-        font-size: clamp(1.8rem, 10vw, 2.5rem);
+        font-size: clamp(2rem, 8vw, 3rem);
         overflow-wrap: break-word;
         word-break: break-word;
         hyphens: auto;
-        line-height: 1.1;
     }
 
     .hero p {
@@ -598,53 +578,42 @@ section {
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem !important;
-        margin-bottom: 2rem;
     }
 
     .status-badge {
         justify-content: center;
         font-size: 0.75rem;
-        margin-top: 2rem; /* Increased top margin to prevent catching the floating frame */
-        margin-bottom: 1rem;
     }
 
     .profile-frame {
-        width: 220px !important;
-        height: 260px !important;
+        width: 240px !important;
+        height: 280px !important;
     }
 
     /* Sections */
     section {
-        padding: 60px 0; /* Consistent padding */
+        padding: 40px 0;
     }
 
     .section-title {
         font-size: 1.8rem;
-        margin: 2rem 0 1.5rem 0; /* Tighter margins */
+        margin: 3rem 0 2rem 0;
     }
 
     .container {
         padding: 0 1rem;
     }
 
-    /* About stats — STACK VERTICALLY ON MOBILE */
-    #about div[style*="display: flex"] {
-        flex-direction: column !important;
-        gap: 2rem !important;
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-        align-items: center !important;
-    }
-
-    #about h3 {
-        font-size: 2.2rem !important; 
-        margin-bottom: 0.2rem !important;
-        white-space: nowrap;
+    /* About stats */
+    #about > div > div:nth-child(2) {
+        flex-direction: column;
+        gap: 1.5rem !important;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
     }
 
     #about p {
-        font-size: 0.85rem !important;
-        letter-spacing: 1.5px !important;
+        font-size: 1rem !important;
     }
 
     /* Grids */
@@ -709,7 +678,7 @@ section {
         text-align: center !important;
     }
 
-    .contact-grid > div:last-child h3 {
+.contact-grid > div:last-child h3 {
         font-size: 1.4rem !important;
     }
 
@@ -758,16 +727,8 @@ section {
     }
 
     .profile-frame {
-        width: 160px !important;
-        height: 200px !important;
-    }
-
-    .hero-actions {
-        gap: 0.8rem !important;
-    }
-
-    .status-badge {
-        margin-top: 1.5rem;
+        width: 200px !important;
+        height: 240px !important;
     }
 
     .section-title {
