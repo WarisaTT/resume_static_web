@@ -28,6 +28,9 @@ Screenshot*
 1.jpg
 2.jpg
 resume*
+# Allow downloadable CV PDFs in assets (must be after *.pdf and resume* rules)
+!assets/pdf/
+!assets/pdf/*.pdf
 Untitled*
 Template.png
 Rectangle*
