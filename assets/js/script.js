@@ -105,7 +105,6 @@ reveal();
     const modalHeroImg = document.getElementById('modal-hero-img');
     const modalReadme = document.getElementById('modal-readme');
     const modalTechTags = document.getElementById('modal-tech-tags');
-    const modalGithubLink = document.getElementById('modal-github-link');
     const modalThumbnails = document.getElementById('modal-thumbnails');
     const modalImageBadge = document.getElementById('modal-image-badge');
     const prevBtn = document.getElementById('modal-prev-btn');
@@ -128,6 +127,7 @@ reveal();
             const category = card.dataset.category || 'PROJECT';
             const readme = card.dataset.readme || '';
             const repo = card.dataset.repo || '';
+            const otherLink = card.dataset.otherLink || '';
             const imagesStr = card.dataset.images || '';
             
             currentImages = imagesStr.split(',').map(i => i.trim()).filter(i => i);
@@ -147,12 +147,38 @@ reveal();
                 modalTechTags.appendChild(span);
             });
 
-            // Populate Github Action Button
-            if (repo) {
-                modalGithubLink.style.display = 'flex';
-                modalGithubLink.href = repo;
-            } else {
-                modalGithubLink.style.display = 'none';
+            // Populate Action Buttons dynamically
+            const modalActions = modal.querySelector('.modal-actions');
+            if (modalActions) {
+                modalActions.innerHTML = '';
+                const isThai = document.documentElement.lang === 'th';
+                
+                if (repo) {
+                    const repoLabel = isThai ? 'GitHub Repository' : 'GitHub Repository';
+                    modalActions.innerHTML += `
+                        <a href="${repo}" target="_blank" class="modal-btn github-btn" style="display: flex;">
+                            <i class="fab fa-github"></i> ${repoLabel}
+                        </a>`;
+                }
+                if (otherLink) {
+                    const otherLabel = isThai ? (card.dataset.otherLinkLabelTh || 'ดูรายละเอียด') : (card.dataset.otherLinkLabelEn || 'View Link');
+                    
+                    // Auto detect icon
+                    let iconClass = 'fas fa-external-link-alt';
+                    const url = otherLink.toLowerCase();
+                    if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                        iconClass = 'fab fa-youtube';
+                    } else if (url.includes('play.google.com') || url.includes('apps.apple.com')) {
+                        iconClass = 'fas fa-mobile-alt';
+                    } else if (url.includes('figma.com')) {
+                        iconClass = 'fab fa-figma';
+                    }
+                    
+                    modalActions.innerHTML += `
+                        <a href="${otherLink}" target="_blank" class="modal-btn" style="display: flex; background: var(--accent); color: var(--text-white); font-weight: 700; border-color: var(--accent);">
+                            <i class="${iconClass}"></i> ${otherLabel}
+                        </a>`;
+                }
             }
 
             // Setup Gallery

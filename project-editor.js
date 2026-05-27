@@ -36,7 +36,7 @@ const TH_HTML = path.join(__dirname, 'th.html');
 function getSiteData() {
     if (!fs.existsSync(DATA_FILE)) {
         return {
-            profile: {}, projects: [], experience: [], certifications: [], polaroid_strip: [], contact: {}
+            profile: {}, projects: [], experience: [], certifications: [], polaroid_strip: [], contact: {}, skills: []
         };
     }
     const data = fs.readFileSync(DATA_FILE, 'utf8');
@@ -72,6 +72,7 @@ function saveSiteData(data) {
         about: generateAboutHTML(data.profile, false),
         timeline: generateTimelineHTML(data.experience, false),
         projects: generateProjectsHTML(data.projects, false),
+        skills: generateSkillsHTML(data.skills, false),
         certs: generateCertsHTML(data.certifications, data.polaroid_strip, false),
         contact: generateContactHTML(data.contact, false)
     };
@@ -83,6 +84,7 @@ function saveSiteData(data) {
         about: generateAboutHTML(data.profile, true),
         timeline: generateTimelineHTML(data.experience, true),
         projects: generateProjectsHTML(data.projects, true),
+        skills: generateSkillsHTML(data.skills, true),
         certs: generateCertsHTML(data.certifications, data.polaroid_strip, true),
         contact: generateContactHTML(data.contact, true)
     };
@@ -261,7 +263,10 @@ function generateProjectsHTML(projects, isThai) {
         
         const readmeEscaped = readme.replace(/"/g, '&quot;');
         const categoryEscaped = category.replace(/"/g, '&quot;');
+        
         const repoAttr = p.repo ? ` data-repo="${p.repo}"` : ' data-repo=""';
+        const otherLinkAttr = ` data-other-link="${p.other_link || ''}" data-other-link-label-th="${p.other_link_label_th || ''}" data-other-link-label-en="${p.other_link_label_en || ''}"`;
+        
         const imageTag = p.images[0] ? `<img src="assets/images/project_images/${p.images[0]}" alt="${title}">` : '';
         
         let categoryTag = '';
@@ -274,10 +279,28 @@ function generateProjectsHTML(projects, isThai) {
         const bulletsHTML = bullets.map(b => `                    <li>${b}</li>`).join('\n');
         const tagsHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join(' ');
         
-        const repoBtnText = isThai ? 'GitHub Repo' : 'GitHub Repo';
-        const repoBtnHTML = p.repo ? `                <a href="${p.repo}" target="_blank" style="margin-top: 1rem; display: inline-block; color: var(--primary-light); text-decoration: none; font-weight: 600;"><i class="fab fa-github"></i> ${repoBtnText}</a>` : '';
+        let linksHTML = '<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">';
+        if (p.repo) {
+            linksHTML += `                <a href="${p.repo}" target="_blank" style="display: inline-block; color: var(--primary-light); text-decoration: none; font-weight: 600;"><i class="fab fa-github"></i> GitHub Repo</a>`;
+        }
+        if (p.other_link) {
+            const otherLabel = isThai ? (p.other_link_label_th || 'ดูรายละเอียด') : (p.other_link_label_en || 'View Link');
+            
+            // Auto detect icon
+            let iconClass = 'fas fa-external-link-alt';
+            const url = p.other_link.toLowerCase();
+            if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                iconClass = 'fab fa-youtube';
+            } else if (url.includes('play.google.com') || url.includes('apps.apple.com')) {
+                iconClass = 'fas fa-mobile-alt';
+            } else if (url.includes('figma.com')) {
+                iconClass = 'fab fa-figma';
+            }
+            linksHTML += `                <a href="${p.other_link}" target="_blank" style="display: inline-block; color: var(--accent); text-decoration: none; font-weight: 600;"><i class="${iconClass}"></i> ${otherLabel}</a>`;
+        }
+        linksHTML += '</div>';
 
-        return `            <div class="glass-card project-card" data-images="${imagesStr}" data-readme="${readmeEscaped}" data-category="${categoryEscaped}"${repoAttr}>
+        return `            <div class="glass-card project-card" data-images="${imagesStr}" data-readme="${readmeEscaped}" data-category="${categoryEscaped}"${repoAttr}${otherLinkAttr}>
                 <div class="project-image-wrapper">
                     ${imageTag}
                 </div>
@@ -290,9 +313,41 @@ ${bulletsHTML}
                 <div class="tech-tags">
                     ${tagsHTML}
                 </div>
-${repoBtnHTML}
+${linksHTML}
             </div>`;
     }).join('\n\n');
+}
+
+function generateSkillsHTML(skills, isThai) {
+    const secTitle = isThai ? 'ทักษะทางเทคนิค' : 'Technical Skills';
+    if (!skills || skills.length === 0) return ``;
+
+    const categoriesHTML = skills.map(cat => {
+        const title = isThai ? cat.title_th : cat.title_en;
+        const itemsHTML = cat.items.map(item => {
+            const name = isThai ? item.name_th : item.name_en;
+            const colorStyle = item.color ? ` style="color: ${item.color}"` : '';
+            const iconHTML = item.icon ? `<i class="${item.icon}"${colorStyle}></i> ` : '';
+            return `                    <span class="sub-tag">${iconHTML}${name}</span>`;
+        }).join('\n');
+
+        return `            <div class="glass-card">
+                <div class="category-header">
+                    <i class="fas ${cat.icon}"></i>
+                    <h3>${title}</h3>
+                </div>
+                <div class="sub-skills">
+${itemsHTML}
+                </div>
+            </div>`;
+    }).join('\n\n');
+
+    return `    <section id="skills" class="container reveal">
+        <h2 class="section-title">${secTitle}</h2>
+        <div class="skills-grid-detailed">
+${categoriesHTML}
+        </div>
+    </section>`;
 }
 
 function generateCertsHTML(certs, strip, isThai) {
@@ -391,7 +446,7 @@ function generateContactHTML(contact, isThai) {
 function rebuildHTMLFile(filePath, htmlBlocks) {
     let content = fs.readFileSync(filePath, 'utf8');
 
-    const sections = ['HERO', 'ABOUT', 'TIMELINE', 'PROJECTS', 'CERTS', 'CONTACT'];
+    const sections = ['HERO', 'ABOUT', 'TIMELINE', 'PROJECTS', 'SKILLS', 'CERTS', 'CONTACT'];
     
     sections.forEach(sec => {
         const startTag = `<!-- ${sec}_START -->`;
@@ -1043,6 +1098,7 @@ app.get('/', (req, res) => {
             <button class="tab-btn" onclick="switchTab('projects-tab', this)"><i class="fas fa-folder-open"></i> Projects Portfolio</button>
             <button class="tab-btn" onclick="switchTab('timeline-tab', this)"><i class="fas fa-history"></i> Career Timeline</button>
             <button class="tab-btn" onclick="switchTab('certs-tab', this)"><i class="fas fa-graduation-cap"></i> Certifications</button>
+            <button class="tab-btn" onclick="switchTab('skills-tab', this)"><i class="fas fa-star"></i> Technical Skills</button>
             <button class="tab-btn" onclick="switchTab('contact-tab', this)"><i class="fas fa-envelope"></i> Contact Postcard</button>
         </div>
 
@@ -1290,6 +1346,20 @@ app.get('/', (req, res) => {
             </div>
         </div>
 
+        <!-- ==================== Tab Content: SKILLS ==================== -->
+        <div class="tab-content" id="skills-tab">
+            <div class="scrapbook-paper" style="border-style: dashed; border-color: var(--primary); text-align: center; padding: 2rem;">
+                <h2 class="section-header" style="margin-bottom: 1rem;">ระบบจัดการทักษะทางเทคนิค (Technical Skills Manager)</h2>
+                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">คุณสามารถเพิ่ม แก้ไข จัดเรียง หรือลบหมวดหมู่ทักษะหลักและทักษะย่อยทั้งหมดที่จะแสดงในส่วน Technical Skills บนหน้าเว็บได้จากหน้านี้โดยตรง</p>
+                <button class="btn btn-add" onclick="addNewSkillCategory()" style="margin-bottom: 0;">
+                    <i class="fas fa-plus"></i> เพิ่มหมวดหมู่ทักษะหลักใหม่ (Add Skill Category)
+                </button>
+            </div>
+            <div id="skills-list-container">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+
         <!-- ==================== Tab Content: CONTACT ==================== -->
         <div class="tab-content" id="contact-tab">
             <div class="scrapbook-paper">
@@ -1379,6 +1449,20 @@ app.get('/', (req, res) => {
                 <div class="form-group full-width">
                     <label for="proj_repo">GitHub Repository Link</label>
                     <input type="url" id="proj_repo">
+                </div>
+                <div class="form-group full-width">
+                    <label for="proj_other_link">ลิงก์อื่นเพิ่มเติม (Other Link - e.g., Live Demo, Website, Figma)</label>
+                    <input type="url" id="proj_other_link" placeholder="https://...">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="proj_other_link_label_en">Other Link Label (EN)</label>
+                        <input type="text" id="proj_other_link_label_en" placeholder="e.g. Live Demo, Visit Website">
+                    </div>
+                    <div class="form-group">
+                        <label for="proj_other_link_label_th">ป้ายชื่อลิงก์เพิ่มเติม (TH)</label>
+                        <input type="text" id="proj_other_link_label_th" placeholder="เช่น ดูตัวอย่างจริง, ดูเว็บไซต์">
+                    </div>
                 </div>
                 <div class="form-group full-width">
                     <label for="proj_tags">Tech Tags (Comma separated)</label>
@@ -1595,6 +1679,7 @@ app.get('/', (req, res) => {
             try { renderTimelineList(); } catch (e) { console.error("Error rendering timeline list:", e); }
             try { renderCertsList(); } catch (e) { console.error("Error rendering certs list:", e); }
             try { renderPolaroidStripList(); } catch (e) { console.error("Error rendering polaroid strip list:", e); }
+            try { renderSkillsList(); } catch (e) { console.error("Error rendering skills list:", e); }
         }
 
         async function loadAvailableImages() {
@@ -2024,6 +2109,9 @@ app.get('/', (req, res) => {
             document.getElementById('proj_desc_en').value = p.desc_en || '';
             document.getElementById('proj_desc_th').value = p.desc_th || '';
             document.getElementById('proj_repo').value = p.repo || '';
+            document.getElementById('proj_other_link').value = p.other_link || '';
+            document.getElementById('proj_other_link_label_en').value = p.other_link_label_en || '';
+            document.getElementById('proj_other_link_label_th').value = p.other_link_label_th || '';
             document.getElementById('proj_tags').value = p.tags ? p.tags.join(', ') : '';
             document.getElementById('proj_readme_en').value = p.readme_en || '';
             document.getElementById('proj_readme_th').value = p.readme_th || '';
@@ -2160,6 +2248,9 @@ app.get('/', (req, res) => {
                 desc_en: document.getElementById('proj_desc_en').value,
                 desc_th: document.getElementById('proj_desc_th').value,
                 repo: document.getElementById('proj_repo').value,
+                other_link: document.getElementById('proj_other_link').value,
+                other_link_label_en: document.getElementById('proj_other_link_label_en').value,
+                other_link_label_th: document.getElementById('proj_other_link_label_th').value,
                 tags,
                 readme_en: document.getElementById('proj_readme_en').value,
                 readme_th: document.getElementById('proj_readme_th').value,
@@ -2308,6 +2399,231 @@ app.get('/', (req, res) => {
             }, 3500);
         }
 
+        // ==================== Technical Skills Management ====================
+        function renderSkillsList() {
+            const container = document.getElementById('skills-list-container');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            if (!db.skills) db.skills = [];
+            const totalCats = db.skills.length;
+
+            db.skills.forEach((cat, catIdx) => {
+                const card = document.createElement('div');
+                card.className = 'scrapbook-paper';
+                card.style.marginBottom = '2rem';
+                
+                // Construct skill items HTML
+                let itemsHTML = '';
+                if (cat.items && cat.items.length > 0) {
+                    const totalItems = cat.items.length;
+                    itemsHTML = cat.items.map((item, itemIdx) => {
+                        return \`
+                        <div style="display: flex; gap: 0.8rem; align-items: center; margin-bottom: 0.8rem; border-bottom: 1px dashed var(--glass-border); padding-bottom: 0.5rem; flex-wrap: wrap;">
+                            <div style="display:flex; flex-direction:column; gap:0.2rem; flex-shrink:0;">
+                                <button class="btn" style="background:rgba(124,58,237,0.05);color:var(--primary);padding:0.2rem 0.35rem;font-size:0.7rem;\${itemIdx === 0 ? 'opacity:0.3;cursor:default;' : ''}" \${itemIdx === 0 ? 'disabled' : ''} onclick="moveSkillItem(\${catIdx}, \${itemIdx}, -1)" title="ขึ้น">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <button class="btn" style="background:rgba(124,58,237,0.05);color:var(--primary);padding:0.2rem 0.35rem;font-size:0.7rem;\${itemIdx === totalItems - 1 ? 'opacity:0.3;cursor:default;' : ''}" \${itemIdx === totalItems - 1 ? 'disabled' : ''} onclick="moveSkillItem(\${catIdx}, \${itemIdx}, 1)" title="ลง">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div style="flex: 2; min-width: 150px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.7rem; margin-bottom: 0.2rem;">ชื่อทักษะ (TH)</label>
+                                <input type="text" style="padding: 0.4rem; font-size: 0.85rem;" value="\${item.name_th || ''}" onchange="updateSkillItemVal(\${catIdx}, \${itemIdx}, 'name_th', this.value)">
+                            </div>
+                            <div style="flex: 2; min-width: 150px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.7rem; margin-bottom: 0.2rem;">Skill Name (EN)</label>
+                                <input type="text" style="padding: 0.4rem; font-size: 0.85rem;" value="\${item.name_en || ''}" onchange="updateSkillItemVal(\${catIdx}, \${itemIdx}, 'name_en', this.value)">
+                            </div>
+                            <div style="flex: 1.5; min-width: 120px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.7rem; margin-bottom: 0.2rem;">ไอคอน (FontAwesome)</label>
+                                <input type="text" style="padding: 0.4rem; font-size: 0.85rem;" value="\${item.icon || ''}" placeholder="เช่น fab fa-golang" onchange="updateSkillItemVal(\${catIdx}, \${itemIdx}, 'icon', this.value)">
+                            </div>
+                            <div style="flex: 1; min-width: 80px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.7rem; margin-bottom: 0.2rem;">รหัสสีไอคอน</label>
+                                <div style="display: flex; gap: 0.3rem; align-items: center;">
+                                    <input type="color" style="width: 28px; height: 28px; padding: 0; border: none; cursor: pointer;" value="\${item.color || '#7c3aed'}" onchange="updateSkillItemColor(\${catIdx}, \${itemIdx}, this.value)">
+                                    <input type="text" style="padding: 0.4rem; font-size: 0.8rem; width: 80px;" value="\${item.color || ''}" placeholder="#7c3aed" onchange="updateSkillItemVal(\${catIdx}, \${itemIdx}, 'color', this.value)">
+                                </div>
+                            </div>
+                            <button class="btn btn-delete" style="padding: 0.5rem; margin-top: 1rem;" onclick="deleteSkillItem(\${catIdx}, \${itemIdx})" title="ลบทักษะนี้">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        \`;
+                    }).join('');
+                } else {
+                    itemsHTML = \`<p style="color: var(--text-muted); font-size: 0.9rem; text-align: center; padding: 1rem 0;">ยังไม่มีทักษะในหมวดหมู่นี้</p>\`;
+                }
+
+                card.innerHTML = \`
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--glass-border); padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <div style="display:flex; flex-direction:column; gap:0.2rem; flex-shrink:0;">
+                                <button class="btn" style="background:rgba(124,58,237,0.08);color:var(--primary);padding:0.3rem 0.5rem;font-size:0.8rem;\${catIdx === 0 ? 'opacity:0.3;cursor:default;' : ''}" \${catIdx === 0 ? 'disabled' : ''} onclick="moveSkillCategory(\${catIdx}, -1)" title="เลื่อนขึ้น">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <button class="btn" style="background:rgba(124,58,237,0.08);color:var(--primary);padding:0.3rem 0.5rem;font-size:0.8rem;\${catIdx === totalCats - 1 ? 'opacity:0.3;cursor:default;' : ''}" \${catIdx === totalCats - 1 ? 'disabled' : ''} onclick="moveSkillCategory(\${catIdx}, 1)" title="เลื่อนลง">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: var(--primary);">หมวดหมู่ที่ \${catIdx + 1}: \${cat.title_en || 'หมวดใหม่'}</h3>
+                        </div>
+                        <button class="btn btn-delete" onclick="deleteSkillCategory(\${catIdx})" style="padding: 0.6rem 1.2rem;">
+                            <i class="fas fa-trash-alt"></i> ลบหมวดหมู่นี้ (Delete Category)
+                        </button>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;" class="form-row">
+                        <div class="form-group" style="padding-left:0; margin-bottom:0;">
+                            <label>ชื่อหมวดหมู่ (TH)</label>
+                            <input type="text" value="\${cat.title_th || ''}" onchange="updateSkillCategoryVal(\${catIdx}, 'title_th', this.value)">
+                        </div>
+                        <div class="form-group" style="padding-left:0; margin-bottom:0;">
+                            <label>Category Title (EN)</label>
+                            <input type="text" value="\${cat.title_en || ''}" onchange="updateSkillCategoryVal(\${catIdx}, 'title_en', this.value)">
+                        </div>
+                        <div class="form-group" style="padding-left:0; margin-bottom:0;">
+                            <label>ไอคอนของหมวดหมู่ (FontAwesome class)</label>
+                            <input type="text" value="\${cat.icon || ''}" placeholder="เช่น fa-server" onchange="updateSkillCategoryVal(\${catIdx}, 'icon', this.value)">
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-list"></i> ทักษะย่อยในหมวดนี้ (Skill Items)
+                        </h4>
+                        
+                        <div id="skill-items-list-\${catIdx}">
+                            \${itemsHTML}
+                        </div>
+                        
+                        <!-- Form to Add Skill Item -->
+                        <div style="background: rgba(124,58,237,0.03); border: 1px dashed var(--glass-border); padding: 1rem; border-radius: 8px; margin-top: 1.5rem; display: flex; gap: 0.8rem; align-items: flex-end; flex-wrap: wrap;">
+                            <div style="flex: 2; min-width: 150px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.75rem;">ชื่อทักษะย่อยใหม่ (TH)</label>
+                                <input type="text" id="new-item-th-\${catIdx}" style="padding: 0.4rem; font-size: 0.85rem;" placeholder="เช่น Golang">
+                            </div>
+                            <div style="flex: 2; min-width: 150px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.75rem;">New Skill Name (EN)</label>
+                                <input type="text" id="new-item-en-\${catIdx}" style="padding: 0.4rem; font-size: 0.85rem;" placeholder="e.g. Golang">
+                            </div>
+                            <div style="flex: 1.5; min-width: 120px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.75rem;">ไอคอน (FontAwesome)</label>
+                                <input type="text" id="new-item-icon-\${catIdx}" style="padding: 0.4rem; font-size: 0.85rem;" placeholder="fab fa-golang">
+                            </div>
+                            <div style="flex: 1; min-width: 80px;" class="form-group" style="padding-left:0; margin-bottom:0;">
+                                <label style="font-size:0.75rem;">รหัสสีไอคอน</label>
+                                <div style="display: flex; gap: 0.3rem; align-items: center;">
+                                    <input type="color" id="new-item-color-picker-\${catIdx}" style="width: 28px; height: 28px; padding: 0; border: none; cursor: pointer;" value="#7c3aed" onchange="document.getElementById('new-item-color-\${catIdx}').value = this.value">
+                                    <input type="text" id="new-item-color-\${catIdx}" style="padding: 0.4rem; font-size: 0.8rem; width: 80px;" placeholder="#7c3aed" value="#7c3aed">
+                                </div>
+                            </div>
+                            <button class="btn btn-add" style="margin-bottom:0; padding: 0.5rem 1.2rem; font-size:0.85rem; height: 35px; display: inline-flex; align-items: center;" onclick="addSkillItem(\${catIdx})">
+                                <i class="fas fa-plus"></i> เพิ่มทักษะ (Add)
+                            </button>
+                        </div>
+                    </div>
+                \`;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // Skill Category Helpers
+        function addNewSkillCategory() {
+            if (!db.skills) db.skills = [];
+            const newCat = {
+                id: 'skill_' + Date.now(),
+                icon: 'fa-server',
+                title_en: 'New Skill Category',
+                title_th: 'หมวดหมู่ทักษะใหม่',
+                items: []
+            };
+            db.skills.push(newCat);
+            renderSkillsList();
+            showToast('เพิ่มหมวดหมู่ทักษะใหม่แล้ว!');
+        }
+
+        function deleteSkillCategory(catIdx) {
+            if (confirm('คุณแน่ใจหรือไม่ว่าต้องการลบหมวดหมู่ทักษะนี้และทักษะย่อยทั้งหมดในหมวดนี้?')) {
+                db.skills.splice(catIdx, 1);
+                renderSkillsList();
+                showToast('ลบหมวดหมู่ทักษะแล้ว!');
+            }
+        }
+
+        function moveSkillCategory(catIdx, dir) {
+            const newIdx = catIdx + dir;
+            if (newIdx < 0 || newIdx >= db.skills.length) return;
+            const tmp = db.skills[catIdx];
+            db.skills[catIdx] = db.skills[newIdx];
+            db.skills[newIdx] = tmp;
+            renderSkillsList();
+        }
+
+        function updateSkillCategoryVal(catIdx, field, val) {
+            db.skills[catIdx][field] = val;
+        }
+
+        function updateSkillItemVal(catIdx, itemIdx, field, val) {
+            if (!db.skills[catIdx].items) db.skills[catIdx].items = [];
+            db.skills[catIdx].items[itemIdx][field] = val;
+        }
+
+        function updateSkillItemColor(catIdx, itemIdx, val) {
+            if (!db.skills[catIdx].items) db.skills[catIdx].items = [];
+            db.skills[catIdx].items[itemIdx].color = val;
+            renderSkillsList();
+        }
+
+        // Skill Item Helpers
+        function addSkillItem(catIdx) {
+            const nameThInput = document.getElementById(\`new-item-th-\${catIdx}\`);
+            const nameEnInput = document.getElementById(\`new-item-en-\${catIdx}\`);
+            const iconInput = document.getElementById(\`new-item-icon-\${catIdx}\`);
+            const colorInput = document.getElementById(\`new-item-color-\${catIdx}\`);
+            
+            const nameTh = nameThInput.value.trim();
+            const nameEn = nameEnInput.value.trim();
+            const icon = iconInput.value.trim();
+            const color = colorInput.value.trim();
+            
+            if (!nameTh || !nameEn) {
+                alert('กรุณากรอกชื่อทักษะทั้งภาษาไทยและอังกฤษ!');
+                return;
+            }
+            
+            if (!db.skills[catIdx].items) db.skills[catIdx].items = [];
+            
+            const newItem = {
+                name_en: nameEn,
+                name_th: nameTh,
+                icon: icon,
+                color: color
+            };
+            
+            db.skills[catIdx].items.push(newItem);
+            renderSkillsList();
+            showToast('เพิ่มทักษะย่อยสำเร็จ!');
+        }
+
+        function deleteSkillItem(catIdx, itemIdx) {
+            db.skills[catIdx].items.splice(itemIdx, 1);
+            renderSkillsList();
+            showToast('ลบทักษะย่อยแล้ว!');
+        }
+
+        function moveSkillItem(catIdx, itemIdx, dir) {
+            const newIdx = itemIdx + dir;
+            if (newIdx < 0 || newIdx >= db.skills[catIdx].items.length) return;
+            const tmp = db.skills[catIdx].items[itemIdx];
+            db.skills[catIdx].items[itemIdx] = db.skills[catIdx].items[newIdx];
+            db.skills[catIdx].items[newIdx] = tmp;
+            renderSkillsList();
+        }
+
         // Theme toggle logic in CMS
         const themeBtn = document.getElementById('theme-toggle');
         if (themeBtn) {
@@ -2343,6 +2659,15 @@ app.get('/', (req, res) => {
 </html>
 `);
 });
+
+// Trigger auto-rebuild of static files from JSON on startup
+try {
+    console.log('🔄 Rebuilding static index.html and th.html files from website-data.json...');
+    saveSiteData(getSiteData());
+    console.log('✅ Static files successfully rebuilt!');
+} catch (e) {
+    console.error('❌ Auto-rebuild on startup failed:', e);
+}
 
 app.listen(PORT, () => {
     console.log(`\n==================================================`);

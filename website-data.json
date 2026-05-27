@@ -42,22 +42,24 @@
   "projects": [
     {
       "id": "jobspark",
-      "category_en": "GRADUATION PROJECT",
-      "category_th": "GRADUATION PROJECT",
       "title_en": "JOB SPARK",
       "title_th": "JOB SPARK",
+      "category_en": "GRADUATION PROJECT",
+      "category_th": "GRADUATION PROJECT",
       "desc_en": "Secure Job Matching Web Application",
       "desc_th": "Secure Job Matching Web Application",
+      "repo": "https://github.com/WarisaTT/jobspark-project",
+      "other_link": "https://bscit.sit.kmutt.ac.th/capstone25/cp25pl3",
+      "other_link_label_en": "Live Demo",
+      "other_link_label_th": "ลิงก์เว็บ",
+      "tags": [
+        "Golang",
+        "Fiber",
+        "Firebase",
+        "OAuth2"
+      ],
       "readme_en": "JobSpark is a highly secure, automated job matching web application. It features a complete roles system connecting job seekers and employers with smart profile recommendations. Powered by a high-performance Go (Fiber) backend and integrated with Firebase Authentication, it enforces strict data ownership rules across 40+ API endpoints.",
       "readme_th": "JobSpark เป็นเว็บแอปพลิเคชันจับคู่ข้อมูลงานและผู้สมัครแบบอัตโนมัติที่มีความปลอดภัยสูง มาพร้อมระบบบทบาทผู้ใช้แบบเต็มรูปแบบสำหรับเชื่อมโยงผู้หางานและผู้ว่าจ้าง พร้อมการแนะนำโปรไฟล์อัจฉริยะ ขับเคลื่อนด้วยระบบหลังบ้านประสิทธิภาพสูงจาก Go (Fiber) ร่วมกับ Firebase Authentication เพื่อตรวจสอบสิทธิ์การเข้าถึงข้อมูลที่เข้มงวดกว่า 40+ endpoints",
-      "repo": "https://github.com/WarisaTT/jobspark-project",
-      "images": [
-        "jobSpark3.jpeg",
-        "jobSpark1.jpeg",
-        "jobSpark2.jpeg",
-        "jobSpark4.jpeg",
-        "jobSpark5.jpeg"
-      ],
       "bullets_en": [
         "Developed backend using Golang (Fiber) with over 40 RESTful API endpoints.",
         "Integrated Firebase Authentication (OAuth2/OpenID) with ID token verification and role-based authorization.",
@@ -72,30 +74,37 @@
         "ออกแบบโครงสร้างระบบแบบ Scalable รองรับ authentication workflows ที่ปลอดภัย",
         "ทดสอบระบบอัตโนมัติเพื่อรับรองความน่าเชื่อถือและบำรุงรักษาง่าย"
       ],
-      "tags": [
-        "Golang",
-        "Fiber",
-        "Firebase",
-        "OAuth2"
+      "images": [
+        "Eye.png",
+        "jobSpark3.jpeg",
+        "jobSpark1.jpeg",
+        "jobSpark2.jpeg",
+        "jobSpark4.jpeg",
+        "jobSpark5.jpeg",
+        "Screenshot_2026-05-28_at_02.15.09.png"
       ]
     },
     {
       "id": "ploykong",
-      "category_en": "AI INTEGRATED",
-      "category_th": "AI INTEGRATED",
       "title_en": "PLOY KONG",
       "title_th": "PLOY KONG",
+      "category_en": "AI INTEGRATED",
+      "category_th": "AI INTEGRATED",
       "desc_en": "AI-Integrated Portfolio Platform",
       "desc_th": "AI-Integrated Portfolio Platform",
+      "repo": "https://github.com/WarisaTT/PloyKong",
+      "other_link": "",
+      "other_link_label_en": "",
+      "other_link_label_th": "",
+      "tags": [
+        "Go",
+        "Vue.js 3",
+        "Flutter",
+        "LLM",
+        "Docker"
+      ],
       "readme_en": "PLOY KONG is a secure, AI-powered portfolio platform that allows users to quickly build and customize stunning landing pages. It features a robust backend built in Go (Fiber), a responsive Vue.js frontend, and a beautiful Flutter companion app. Integrates multiple LLM APIs (OpenAI, Claude, Gemini) for context-aware resume scoring, content generation, and mock interview coaching.",
       "readme_th": "PLOY KONG คือแพลตฟอร์มสร้างพอร์ตโฟลิโออัจฉริยะด้วย AI ที่ปลอดภัย ช่วยให้ผู้ใช้สร้างและปรับแต่งหน้าเว็บได้อย่างรวดเร็วและสวยงาม พัฒนาด้วย Go (Fiber) สำหรับ Backend, Vue.js 3 สำหรับ Frontend และ Flutter สำหรับแอปพลิเคชันมือถือ เชื่อมต่อกับ LLM APIs หลากหลายค่าย (OpenAI, Claude, Gemini) เพื่อนำมาประเมินคะแนนเรซูเม่, ช่วยสร้างเนื้อหา และเป็นโค้ชจำลองการสัมภาษณ์งานอัจฉริยะ",
-      "repo": "https://github.com/WarisaTT/PloyKong",
-      "images": [
-        "ploykong1.png",
-        "ploykong2.png",
-        "ploykong3.png",
-        "ploykong4.png"
-      ],
       "bullets_en": [
         "Built a full-stack No-Code portfolio builder using Go (Fiber) for backend, Vue.js 3 for frontend, and Flutter for mobile.",
         "Integrated multiple LLM APIs (OpenAI, Claude, Gemini) for AI content generation, resume scoring, and interview coaching.",
@@ -110,28 +119,33 @@
         "Deploy ด้วย Docker Compose, Nginx reverse proxy, SSL (Certbot) และ CI/CD (GitHub Actions)",
         "สร้างฟีเจอร์ One-Click publishing, PDF export, visitor analytics และ push notifications"
       ],
-      "tags": [
-        "Go",
-        "Vue.js 3",
-        "Flutter",
-        "LLM",
-        "Docker"
+      "images": [
+        "PloyKong_promote.png",
+        "Screenshot_2026-05-28_at_02.10.26.png",
+        "Screenshot_2026-05-28_at_02.08.35.png",
+        "Screenshot_2026-05-28_at_02.08.58.png",
+        "Screenshot_2026-05-28_at_02.09.21.png"
       ]
     },
     {
       "id": "kradankanban",
-      "category_en": "WEB APPLICATION",
-      "category_th": "WEB APPLICATION",
       "title_en": "KRADANKANBAN",
       "title_th": "KRADANKANBAN",
+      "category_en": "WEB APPLICATION",
+      "category_th": "WEB APPLICATION",
       "desc_en": "Web Application",
       "desc_th": "Web Application",
+      "repo": "https://github.com/WarisaTT/kradankanban-project",
+      "other_link": "",
+      "other_link_label_en": "",
+      "other_link_label_th": "",
+      "tags": [
+        "Java",
+        "Servlets",
+        "Figma"
+      ],
       "readme_en": "KradanKanban is a highly responsive web-based Kanban board application designed to simplify task tracking and team workflows. Built with a Java Servlets backend, the application features dynamic card movement, priority tag levels, sorting options, and drag-and-drop workflow tracking. Its user-friendly interface is designed to emulate Figma prototypes, delivering a sleek, modern visual aesthetic.",
       "readme_th": "KradanKanban เป็นเว็บแอปพลิเคชันกระดานคัมบังที่ตอบสนองรวดเร็ว ออกแบบมาเพื่อเพิ่มประสิทธิภาพในการติดตามงานและเวิร์กโฟลว์ของทีม พัฒนาด้วย Java Servlets ในส่วนระบบหลังบ้าน มาพร้อมระบบจัดการการ์ดงานแบบไดนามิก การกำหนดระดับความสำคัญ คัดกรองตัวเลือก และลากวาง (Drag-and-Drop) โดยหน้าต่างผู้ใช้ได้รับการออกแบบตามต้นแบบใน Figma เพื่อส่งมอบหน้าตาเว็บที่เรียบหรูและทันสมัย",
-      "repo": "https://github.com/WarisaTT/kradankanban-project",
-      "images": [
-        "kradankanban1.png"
-      ],
       "bullets_en": [
         "Developed a full-stack Kanban web application using Java Servlets, JavaScript, HTML, and CSS.",
         "Designed task creation, priority management, and workflow tracking features.",
@@ -144,26 +158,27 @@
         "วาง Backend logic แบบ servlet-based architecture จัดการ data flow ระหว่าง frontend-backend",
         "ออกแบบ UX/UI prototypes บน Figma เพื่อปรับปรุง usability"
       ],
-      "tags": [
-        "Java",
-        "Servlets",
-        "Figma"
+      "images": [
+        "kdkb.png",
+        "Screenshot_2026-05-28_at_01.32.34.png"
       ]
     },
     {
       "id": "robotics",
-      "category_en": "INDUSTRIAL AUTOMATION",
-      "category_th": "INDUSTRIAL AUTOMATION",
       "title_en": "ROBOTICS VISION SYSTEM",
       "title_th": "ROBOTICS VISION SYSTEM",
+      "category_en": "INDUSTRIAL AUTOMATION",
+      "category_th": "INDUSTRIAL AUTOMATION",
       "desc_en": "Industrial Automation Project",
       "desc_th": "Industrial Automation Project",
+      "repo": "",
+      "tags": [
+        "C#",
+        "VB",
+        "Machine Vision"
+      ],
       "readme_en": "Robotics Vision System is an advanced machine vision application custom-tailored for high-precision industrial automation. Developed in C# and VB with specialized Machine Vision algorithms, this system handles real-time metal component detection on conveyor belts. Features precise object recognition, orientation calibration, high-reflectivity noise filtering, and micro-accuracy coordinate mapping for industrial robotic arms.",
       "readme_th": "Robotics Vision System เป็นระบบประมวลผลภาพขั้นสูงที่ออกแบบมาสำหรับระบบอัตโนมัติในโรงงานอุตสาหกรรมที่มีความแม่นยำสูง พัฒนาขึ้นโดยใช้ C# และ VB ร่วมกับอัลกอริทึมแมชชีนวิชันเฉพาะทาง เพื่อตรวจจับและระบุพิกัดชิ้นส่วนโลหะบนสายพานลำเลียงในแบบเรียลไทม์ โดดเด่นด้วยฟีเจอร์การจดจำวัตถุ การปรับเทียบทิศทาง การกรองแสงสะท้อนของโลหะ และการคำนวณพิกัด XY สำหรับแขนกลอุตสาหกรรม",
-      "repo": "",
-      "images": [
-        "robotics1.png"
-      ],
       "bullets_en": [
         "Engineered vision logic using pattern matching for object recognition, orientation detection, and precise XY coordinate mapping.",
         "Optimized image processing for high-reflective metal components and performed calibration, tuning, and real-environment industrial testing."
@@ -172,76 +187,90 @@
         "พัฒนาระบบตรวจจับวัตถุด้วย pattern matching สำหรับ object recognition และ XY coordinate mapping",
         "ปรับแต่งการประมวลผลภาพสำหรับชิ้นส่วนโลหะสะท้อนแสงสูง พร้อมทดสอบในโรงงานจริง"
       ],
-      "tags": [
-        "C#",
-        "VB",
-        "Machine Vision"
+      "images": [
+        "Screenshot_2026-05-28_at_01.30.38.png",
+        "robotics1.png"
       ]
     },
     {
       "id": "bion",
-      "category_en": "ENTERPRISE SYSTEM",
-      "category_th": "ENTERPRISE SYSTEM",
       "title_en": "TRRCORP-BION",
       "title_th": "TRRCORP-BION",
+      "category_en": "ENTERPRISE SYSTEM",
+      "category_th": "ENTERPRISE SYSTEM",
       "desc_en": "Bio-Energy Purchasing System",
       "desc_th": "Bio-Energy Purchasing System",
+      "repo": "",
+      "other_link": "https://canva.link/qb6nvlxzy90tx7f",
+      "other_link_label_en": "Presentation",
+      "other_link_label_th": "การนำเสนอ",
+      "tags": [
+        "C# (.NET)",
+        "SQL Server"
+      ],
       "readme_en": "TRRCORP-BION is an enterprise-grade bio-energy raw material procurement and supply chain management system. Built using a secure .NET backend (C#) and high-performance SQL Server database architecture, it manages logistics scale-in tracking, purchasing workflows, stored procedure data validation, and real-time fuel storage capacity alerts.",
       "readme_th": "TRRCORP-BION เป็นระบบการจัดซื้อวัตถุดิบพลังงานชีวภาพและระบบบริหารจัดการห่วงโซ่อุปทานระดับองค์กร พัฒนาโดยใช้ Backend ที่มีความปลอดภัยสูงด้วย .NET (C#) ร่วมกับฐานข้อมูล SQL Server ประสิทธิภาพสูง จัดการขั้นตอนการรับชั่งวัตถุดิบขาลเข้า, ขั้นตอนการจัดซื้อการค้า, การตรวจสอบข้อมูลความถูกต้องผ่าน Stored Procedures และการแจ้งเตือนความจุที่เก็บเชื้อเพลิงแบบเรียลไทม์",
-      "repo": "",
-      "images": [
-        "bion1.png"
-      ],
       "bullets_en": [
         "Developed backend services using C# (.NET) with SQL Server, designed stored procedures with business rules, and implemented notification features for capacity monitoring."
       ],
       "bullets_th": [
         "พัฒนา Backend services ด้วย C# (.NET) กับ SQL Server ออกแบบ stored procedures และระบบแจ้งเตือนอัตโนมัติ"
       ],
-      "tags": [
-        "C# (.NET)",
-        "SQL Server"
+      "images": [
+        "Screenshot_2026-05-28_at_01.36.39.png",
+        "17.jpg",
+        "18.jpg",
+        "19.jpg",
+        "20.jpg",
+        "21.jpg",
+        "22.jpg"
       ]
     },
     {
       "id": "ols",
-      "category_en": "LOGISTICS MOBILE APP",
-      "category_th": "LOGISTICS MOBILE APP",
       "title_en": "TRRCORP-OLS",
       "title_th": "TRRCORP-OLS",
+      "category_en": "LOGISTICS MOBILE APP",
+      "category_th": "LOGISTICS MOBILE APP",
       "desc_en": "Outbound Logistics Mobile System",
       "desc_th": "Outbound Logistics Mobile System",
+      "repo": "",
+      "other_link": "https://www.canva.com/design/DAGmRBTJavs/PLTiEaGLzJXMSLzAPAU1Mg/view?utm_content=DAGmRBTJavs&utm_campaign=designshare&utm_medium=link&utm_source=viewer",
+      "other_link_label_en": "Presentation",
+      "other_link_label_th": "การนำเสนอ",
+      "tags": [
+        "Flutter",
+        ".NET API"
+      ],
       "readme_en": "TRRCORP-OLS is a cross-platform outbound logistics and dispatch tracker mobile application. Developed using Flutter for the mobile client and secure .NET backend APIs, this system manages real-time weighing logs (weight-in/weight-out records), performs automatic net cargo weight calculations, and allows seamless offline operations in environments with low network connectivity.",
       "readme_th": "TRRCORP-OLS เป็นแอปพลิเคชันมือถือสำหรับระบบการติดตามโลจิสติกส์และการส่งออกสินค้า พัฒนาด้วย Flutter ในส่วนหน้าบ้าน และเชื่อมต่อระบบหลังบ้านผ่าน .NET APIs จัดการบันทึกข้อมูลการชั่งน้ำหนักขาลเข้าและขาออก (Weight-in/Weight-out logs) คำนวณน้ำหนักสุทธิของสินค้าโดยอัตโนมัติ และรองรับการทำงานในโหมดออฟไลน์เพื่อความต่อเนื่องในพื้นที่อับสัญญาณ",
-      "repo": "",
-      "images": [
-        "ols1.png"
-      ],
       "bullets_en": [
         "Developed Flutter-based mobile application connected to .NET backend APIs, with weight-in/weight-out management, net weight calculation, and system deployment testing."
       ],
       "bullets_th": [
         "พัฒนาแอปมือถือด้วย Flutter เชื่อมต่อ .NET backend APIs จัดการ weight-in/weight-out และคำนวณน้ำหนักสุทธิ"
       ],
-      "tags": [
-        "Flutter",
-        ".NET API"
+      "images": [
+        "Screenshot_2026-05-28_at_01.36.39.png",
+        "35.jpg"
       ]
     },
     {
       "id": "clickword",
-      "category_en": "EDUCATIONAL GAME",
-      "category_th": "EDUCATIONAL GAME",
       "title_en": "CLICK WORD",
       "title_th": "CLICK WORD",
+      "category_en": "EDUCATIONAL GAME",
+      "category_th": "EDUCATIONAL GAME",
       "desc_en": "Web-Based Educational Game",
       "desc_th": "Web-Based Educational Game",
+      "repo": "https://github.com/WarisaTT/Clickword",
+      "tags": [
+        "JavaScript",
+        "HTML/CSS",
+        "UX/UI"
+      ],
       "readme_en": "Click Word is an interactive browser-based educational word game. Built with HTML5, CSS3, and vanilla JavaScript, it challenges users with quick-paced vocabulary card matching, interactive feedback states, and dynamic level scaling. Designed with gamification and micro-interactions to maximize user engagement and accessibility.",
       "readme_th": "Click Word เป็นเกมคำศัพท์เพื่อการศึกษาแบบโต้ตอบบนเว็บ พัฒนาด้วย HTML5, CSS3 และ JavaScript แท้ ท้าทายผู้เล่นด้วยเกมจับคู่คำศัพท์และคำแปลที่สนุกสนาน มีระบบคะแนนสะสมและระดับเลเวลความยากที่ปรับเปลี่ยนได้ ออกแบบโดยเน้น Gamification และการตอบสนองที่ลื่นไหล เพื่อเพิ่มความสนุกสนานและการเข้าถึงสำหรับผู้เรียนทุกกลุ่ม",
-      "repo": "https://github.com/WarisaTT/Clickword",
-      "images": [
-        "clickword1.png"
-      ],
       "bullets_en": [
         "Developed a browser-based vocabulary game using HTML, CSS, and JavaScript with word matching, scoring system, and interactive feedback.",
         "Designed intuitive UX/UI with focus on engagement, accessibility, and clean interface layout."
@@ -250,41 +279,34 @@
         "พัฒนาเกมคำศัพท์บนบราวเซอร์ด้วย HTML, CSS และ JavaScript พร้อมระบบจับคู่และเก็บคะแนน",
         "ออกแบบ UX/UI ที่เน้นความสนุก เข้าถึงง่าย และหน้าตาสะอาด"
       ],
-      "tags": [
-        "JavaScript",
-        "HTML/CSS",
-        "UX/UI"
+      "images": [
+        "clickword.png",
+        "tutorialImage.webp",
+        "modeSelection.png",
+        "rankBoardpage.png"
       ]
     }
   ],
   "experience": [
     {
-      "id": "time_1779877542483",
-      "type": "education",
-      "title_en": "Student",
-      "title_th": "นักเรียน",
-      "subtitle_en": "Suankularbwittayalai Rangsit School (SKR)",
-      "subtitle_th": "โรงเรียนสวนกุหลาบวิทยาลัย รังสิต (สกร.)",
-      "date_en": "May 2019 - May 2021",
-      "date_th": "พ.ค. 2019 - พ.ค. 2021",
+      "id": "exp_3",
+      "type": "work",
+      "title_en": "Software Engineer (Part-time)",
+      "title_th": "Software Engineer (Part-time)",
+      "subtitle_en": "Automate-2015 (Robotics & Automation)",
+      "subtitle_th": "Automate-2015 (Robotics & Automation)",
+      "date_en": "Oct 2025 - Present",
+      "date_th": "ต.ค. 2025 - ปัจจุบัน",
       "description_en": "",
       "description_th": "",
-      "bullets_en": [],
-      "bullets_th": []
-    },
-    {
-      "id": "exp_1",
-      "type": "education",
-      "title_en": "Bachelor of Science (IT)",
-      "title_th": "การศึกษา (ปริญญาตรี)",
-      "subtitle_en": "King Mongkut's University of Technology Thonburi (KMUTT)",
-      "subtitle_th": "King Mongkut's University of Technology Thonburi (KMUTT)",
-      "date_en": "2022 - 2026",
-      "date_th": "2022 - 2026",
-      "description_en": "4th Year student in Information Technology / Computer Science.",
-      "description_th": "คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) ชั้นปีที่ 4",
-      "bullets_en": [],
-      "bullets_th": []
+      "bullets_en": [
+        "Design and develop Machine Vision systems for industrial robotic arms using C# and VB.",
+        "Develop control software to optimize industrial manufacturing processes and automation."
+      ],
+      "bullets_th": [
+        "ออกแบบระบบ Machine Vision (C#, VB) สำหรับแขนกลและการควบคุมระบบอัตโนมัติ",
+        "พัฒนาซอฟต์แวร์ควบคุมเพื่อเพิ่มประสิทธิภาพในกระบวนการผลิต"
+      ]
     },
     {
       "id": "exp_2",
@@ -307,24 +329,32 @@
       ]
     },
     {
-      "id": "exp_3",
-      "type": "work",
-      "title_en": "Software Engineer (Part-time)",
-      "title_th": "Software Engineer (Part-time)",
-      "subtitle_en": "Automate-2015 (Robotics & Automation)",
-      "subtitle_th": "Automate-2015 (Robotics & Automation)",
-      "date_en": "Oct 2025 - Present",
-      "date_th": "ต.ค. 2025 - ปัจจุบัน",
-      "description_en": "",
-      "description_th": "",
-      "bullets_en": [
-        "Design and develop Machine Vision systems for industrial robotic arms using C# and VB.",
-        "Develop control software to optimize industrial manufacturing processes and automation."
-      ],
-      "bullets_th": [
-        "ออกแบบระบบ Machine Vision (C#, VB) สำหรับแขนกลและการควบคุมระบบอัตโนมัติ",
-        "พัฒนาซอฟต์แวร์ควบคุมเพื่อเพิ่มประสิทธิภาพในกระบวนการผลิต"
-      ]
+      "id": "exp_1",
+      "type": "education",
+      "title_en": "Bachelor of Science (IT)",
+      "title_th": "การศึกษา (ปริญญาตรี)",
+      "subtitle_en": "King Mongkut's University of Technology Thonburi (KMUTT)",
+      "subtitle_th": "King Mongkut's University of Technology Thonburi (KMUTT)",
+      "date_en": "July 2022 - July 2026",
+      "date_th": "ก.ค. 2022 - ก.ค. 2026",
+      "description_en": "4th Year student in Information Technology / Computer Science.",
+      "description_th": "คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) ชั้นปีที่ 4",
+      "bullets_en": [],
+      "bullets_th": []
+    },
+    {
+      "id": "time_1779877542483",
+      "type": "education",
+      "title_en": "Education (Student)",
+      "title_th": "การศึกษา (นักเรียนมัธยมปลาย)",
+      "subtitle_en": "Suankularbwittayalai Rangsit School (SKR)",
+      "subtitle_th": "โรงเรียนสวนกุหลาบวิทยาลัย รังสิต (สกร.)",
+      "date_en": "May 2019 - May 2021",
+      "date_th": "พ.ค. 2019 - พ.ค. 2021",
+      "description_en": "Science-Mathematics Program, developing strong analytical and problem-solving skills.",
+      "description_th": "แผนการเรียนวิทย์-คณิต พัฒนาทักษะการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ",
+      "bullets_en": [],
+      "bullets_th": []
     }
   ],
   "certifications": [
