@@ -1,0 +1,737 @@
+{
+  "profile": {
+    "status_th": "พร้อมรับโอกาสใหม่",
+    "status_en": "Available for Opportunities",
+    "first_name_th": "วริษา",
+    "first_name_en": "Warisa",
+    "last_name_th": "เทียมทอง",
+    "last_name_en": "Thiamthong",
+    "subtitle_th": "Full-stack Developer ที่หลงใหลในการพัฒนาเว็บแอปพลิเคชัน แพลตฟอร์ม AI และโซลูชันระบบอัตโนมัติในโรงงานอุตสาหกรรม",
+    "subtitle_en": "Full-stack Developer passionate about web applications, AI platforms, and industrial automation solutions.",
+    "cv_link_th": "assets/pdf/Resume_Warisa_THA.pdf",
+    "cv_link_en": "assets/pdf/Resume_Warisa_ENG.pdf",
+    "about_title_th": "เกี่ยวกับฉัน",
+    "about_title_en": "About Me",
+    "about_text_th": "นักศึกษาชั้นปีสุดท้าย สาขา IT จาก มจธ. มีประสบการณ์จริงจากการฝึกงานและพัฒนาซอฟต์แวร์แบบ Outsource ทั้งด้าน Web Application, Automation และ Robotics หลงใหลในการออกแบบระบบ ตั้งแต่ CI/CD Pipeline, Monitoring ด้วย Grafana ไปจนถึง Security Testing ด้วย OWASP ZAP สำหรับดิฉัน AI คือตัวช่วยทางความคิดที่ขยายศักยภาพมนุษย์ ไม่ใช่สิ่งทดแทน",
+    "about_text_en": "Final-year IT student at KMUTT with real-world experience from internships and outsource development in web applications, automation, and robotics systems. Passionate about system design from CI/CD pipelines and monitoring with Grafana, to security testing with OWASP ZAP. I see AI not as a replacement, but as a thinking partner that amplifies human capability while maintaining strong technical judgment.",
+    "about_img": "IMG_2823.jpeg",
+    "about_caption_th": "ค้นคว้าไอเดียใหม่ๆ",
+    "about_caption_en": "Exploring ideas",
+    "hero_img_1": "CFD901D7-F137-4C58-8512-0ACD53A4EC62.JPG",
+    "hero_tape_1": "tape-pink",
+    "hero_caption_1_th": "",
+    "hero_caption_1_en": "",
+    "hero_img_2": "D6DF40E2-F0D4-4B12-97FA-8A5ADE73D396.JPG",
+    "hero_tape_2": "tape-pink",
+    "hero_caption_2_th": "",
+    "hero_caption_2_en": "",
+    "hero_img_3": "IMG_2429.jpeg",
+    "hero_tape_3": "tape-pink",
+    "hero_caption_3_th": "",
+    "hero_caption_3_en": "",
+    "about_stat1_val": "KMUTT",
+    "about_stat1_lbl_th": "การศึกษา",
+    "about_stat1_lbl_en": "Education",
+    "about_stat2_val": "6+",
+    "about_stat2_lbl_th": "โปรเจกต์",
+    "about_stat2_lbl_en": "Projects Done",
+    "about_stat3_val": "AI",
+    "about_stat3_lbl_th": "เน้นเทคโนโลยี",
+    "about_stat3_lbl_en": "Tech Focus"
+  },
+  "projects": [
+    {
+      "id": "jobspark",
+      "category_en": "GRADUATION PROJECT",
+      "category_th": "GRADUATION PROJECT",
+      "title_en": "JOB SPARK",
+      "title_th": "JOB SPARK",
+      "desc_en": "Secure Job Matching Web Application",
+      "desc_th": "Secure Job Matching Web Application",
+      "readme_en": "JobSpark is a highly secure, automated job matching web application. It features a complete roles system connecting job seekers and employers with smart profile recommendations. Powered by a high-performance Go (Fiber) backend and integrated with Firebase Authentication, it enforces strict data ownership rules across 40+ API endpoints.",
+      "readme_th": "JobSpark เป็นเว็บแอปพลิเคชันจับคู่ข้อมูลงานและผู้สมัครแบบอัตโนมัติที่มีความปลอดภัยสูง มาพร้อมระบบบทบาทผู้ใช้แบบเต็มรูปแบบสำหรับเชื่อมโยงผู้หางานและผู้ว่าจ้าง พร้อมการแนะนำโปรไฟล์อัจฉริยะ ขับเคลื่อนด้วยระบบหลังบ้านประสิทธิภาพสูงจาก Go (Fiber) ร่วมกับ Firebase Authentication เพื่อตรวจสอบสิทธิ์การเข้าถึงข้อมูลที่เข้มงวดกว่า 40+ endpoints",
+      "repo": "https://github.com/WarisaTT/jobspark-project",
+      "images": [
+        "jobSpark3.jpeg",
+        "jobSpark1.jpeg",
+        "jobSpark2.jpeg",
+        "jobSpark4.jpeg",
+        "jobSpark5.jpeg"
+      ],
+      "bullets_en": [
+        "Developed backend using Golang (Fiber) with over 40 RESTful API endpoints.",
+        "Integrated Firebase Authentication (OAuth2/OpenID) with ID token verification and role-based authorization.",
+        "Implemented ownership validation and business rule enforcement within API layers.",
+        "Designed scalable system structure supporting secure authentication workflows.",
+        "Conducted automated testing to ensure API reliability and maintainability."
+      ],
+      "bullets_th": [
+        "พัฒนา Backend ด้วย Golang (Fiber) พร้อม RESTful API กว่า 40 endpoints",
+        "เชื่อมต่อ Firebase Authentication (OAuth2/OpenID) พร้อม ID token verification และ role-based authorization",
+        "สร้างระบบตรวจสอบสิทธิ์การเข้าถึงข้อมูลและบังคับใช้กฎทางธุรกิจภายใน API layers",
+        "ออกแบบโครงสร้างระบบแบบ Scalable รองรับ authentication workflows ที่ปลอดภัย",
+        "ทดสอบระบบอัตโนมัติเพื่อรับรองความน่าเชื่อถือและบำรุงรักษาง่าย"
+      ],
+      "tags": [
+        "Golang",
+        "Fiber",
+        "Firebase",
+        "OAuth2"
+      ]
+    },
+    {
+      "id": "ploykong",
+      "category_en": "AI INTEGRATED",
+      "category_th": "AI INTEGRATED",
+      "title_en": "PLOY KONG",
+      "title_th": "PLOY KONG",
+      "desc_en": "AI-Integrated Portfolio Platform",
+      "desc_th": "AI-Integrated Portfolio Platform",
+      "readme_en": "PLOY KONG is a secure, AI-powered portfolio platform that allows users to quickly build and customize stunning landing pages. It features a robust backend built in Go (Fiber), a responsive Vue.js frontend, and a beautiful Flutter companion app. Integrates multiple LLM APIs (OpenAI, Claude, Gemini) for context-aware resume scoring, content generation, and mock interview coaching.",
+      "readme_th": "PLOY KONG คือแพลตฟอร์มสร้างพอร์ตโฟลิโออัจฉริยะด้วย AI ที่ปลอดภัย ช่วยให้ผู้ใช้สร้างและปรับแต่งหน้าเว็บได้อย่างรวดเร็วและสวยงาม พัฒนาด้วย Go (Fiber) สำหรับ Backend, Vue.js 3 สำหรับ Frontend และ Flutter สำหรับแอปพลิเคชันมือถือ เชื่อมต่อกับ LLM APIs หลากหลายค่าย (OpenAI, Claude, Gemini) เพื่อนำมาประเมินคะแนนเรซูเม่, ช่วยสร้างเนื้อหา และเป็นโค้ชจำลองการสัมภาษณ์งานอัจฉริยะ",
+      "repo": "https://github.com/WarisaTT/PloyKong",
+      "images": [
+        "ploykong1.png",
+        "ploykong2.png",
+        "ploykong3.png",
+        "ploykong4.png"
+      ],
+      "bullets_en": [
+        "Built a full-stack No-Code portfolio builder using Go (Fiber) for backend, Vue.js 3 for frontend, and Flutter for mobile.",
+        "Integrated multiple LLM APIs (OpenAI, Claude, Gemini) for AI content generation, resume scoring, and interview coaching.",
+        "Designed secure RESTful APIs using JWT authentication, MySQL 8, and Redis for session management and rate limiting.",
+        "Deployed using Docker Compose with Nginx reverse proxy, automated SSL via Certbot, and CI/CD with GitHub Actions.",
+        "Delivered features including One-Click portfolio publishing, PDF export, real-time visitor analytics, and push notifications."
+      ],
+      "bullets_th": [
+        "สร้าง No-Code portfolio builder ด้วย Go (Fiber), Vue.js 3 และ Flutter",
+        "เชื่อมต่อ LLM APIs หลายตัว (OpenAI, Claude, Gemini) สำหรับ AI content generation, resume scoring และ interview coaching",
+        "ออกแบบ RESTful APIs ด้วย JWT authentication, MySQL 8 และ Redis สำหรับ session management",
+        "Deploy ด้วย Docker Compose, Nginx reverse proxy, SSL (Certbot) และ CI/CD (GitHub Actions)",
+        "สร้างฟีเจอร์ One-Click publishing, PDF export, visitor analytics และ push notifications"
+      ],
+      "tags": [
+        "Go",
+        "Vue.js 3",
+        "Flutter",
+        "LLM",
+        "Docker"
+      ]
+    },
+    {
+      "id": "kradankanban",
+      "category_en": "WEB APPLICATION",
+      "category_th": "WEB APPLICATION",
+      "title_en": "KRADANKANBAN",
+      "title_th": "KRADANKANBAN",
+      "desc_en": "Web Application",
+      "desc_th": "Web Application",
+      "readme_en": "KradanKanban is a highly responsive web-based Kanban board application designed to simplify task tracking and team workflows. Built with a Java Servlets backend, the application features dynamic card movement, priority tag levels, sorting options, and drag-and-drop workflow tracking. Its user-friendly interface is designed to emulate Figma prototypes, delivering a sleek, modern visual aesthetic.",
+      "readme_th": "KradanKanban เป็นเว็บแอปพลิเคชันกระดานคัมบังที่ตอบสนองรวดเร็ว ออกแบบมาเพื่อเพิ่มประสิทธิภาพในการติดตามงานและเวิร์กโฟลว์ของทีม พัฒนาด้วย Java Servlets ในส่วนระบบหลังบ้าน มาพร้อมระบบจัดการการ์ดงานแบบไดนามิก การกำหนดระดับความสำคัญ คัดกรองตัวเลือก และลากวาง (Drag-and-Drop) โดยหน้าต่างผู้ใช้ได้รับการออกแบบตามต้นแบบใน Figma เพื่อส่งมอบหน้าตาเว็บที่เรียบหรูและทันสมัย",
+      "repo": "https://github.com/WarisaTT/kradankanban-project",
+      "images": [
+        "kradankanban1.png"
+      ],
+      "bullets_en": [
+        "Developed a full-stack Kanban web application using Java Servlets, JavaScript, HTML, and CSS.",
+        "Designed task creation, priority management, and workflow tracking features.",
+        "Structured backend logic using servlet-based architecture and managed data flow between frontend and backend.",
+        "Designed intuitive UX/UI prototypes using Figma to improve usability and task visualization."
+      ],
+      "bullets_th": [
+        "พัฒนา Full-stack Kanban web application ด้วย Java Servlets, JavaScript, HTML และ CSS",
+        "ออกแบบระบบสร้าง task, จัดการ priority และ workflow tracking",
+        "วาง Backend logic แบบ servlet-based architecture จัดการ data flow ระหว่าง frontend-backend",
+        "ออกแบบ UX/UI prototypes บน Figma เพื่อปรับปรุง usability"
+      ],
+      "tags": [
+        "Java",
+        "Servlets",
+        "Figma"
+      ]
+    },
+    {
+      "id": "robotics",
+      "category_en": "INDUSTRIAL AUTOMATION",
+      "category_th": "INDUSTRIAL AUTOMATION",
+      "title_en": "ROBOTICS VISION SYSTEM",
+      "title_th": "ROBOTICS VISION SYSTEM",
+      "desc_en": "Industrial Automation Project",
+      "desc_th": "Industrial Automation Project",
+      "readme_en": "Robotics Vision System is an advanced machine vision application custom-tailored for high-precision industrial automation. Developed in C# and VB with specialized Machine Vision algorithms, this system handles real-time metal component detection on conveyor belts. Features precise object recognition, orientation calibration, high-reflectivity noise filtering, and micro-accuracy coordinate mapping for industrial robotic arms.",
+      "readme_th": "Robotics Vision System เป็นระบบประมวลผลภาพขั้นสูงที่ออกแบบมาสำหรับระบบอัตโนมัติในโรงงานอุตสาหกรรมที่มีความแม่นยำสูง พัฒนาขึ้นโดยใช้ C# และ VB ร่วมกับอัลกอริทึมแมชชีนวิชันเฉพาะทาง เพื่อตรวจจับและระบุพิกัดชิ้นส่วนโลหะบนสายพานลำเลียงในแบบเรียลไทม์ โดดเด่นด้วยฟีเจอร์การจดจำวัตถุ การปรับเทียบทิศทาง การกรองแสงสะท้อนของโลหะ และการคำนวณพิกัด XY สำหรับแขนกลอุตสาหกรรม",
+      "repo": "",
+      "images": [
+        "robotics1.png"
+      ],
+      "bullets_en": [
+        "Engineered vision logic using pattern matching for object recognition, orientation detection, and precise XY coordinate mapping.",
+        "Optimized image processing for high-reflective metal components and performed calibration, tuning, and real-environment industrial testing."
+      ],
+      "bullets_th": [
+        "พัฒนาระบบตรวจจับวัตถุด้วย pattern matching สำหรับ object recognition และ XY coordinate mapping",
+        "ปรับแต่งการประมวลผลภาพสำหรับชิ้นส่วนโลหะสะท้อนแสงสูง พร้อมทดสอบในโรงงานจริง"
+      ],
+      "tags": [
+        "C#",
+        "VB",
+        "Machine Vision"
+      ]
+    },
+    {
+      "id": "bion",
+      "category_en": "ENTERPRISE SYSTEM",
+      "category_th": "ENTERPRISE SYSTEM",
+      "title_en": "TRRCORP-BION",
+      "title_th": "TRRCORP-BION",
+      "desc_en": "Bio-Energy Purchasing System",
+      "desc_th": "Bio-Energy Purchasing System",
+      "readme_en": "TRRCORP-BION is an enterprise-grade bio-energy raw material procurement and supply chain management system. Built using a secure .NET backend (C#) and high-performance SQL Server database architecture, it manages logistics scale-in tracking, purchasing workflows, stored procedure data validation, and real-time fuel storage capacity alerts.",
+      "readme_th": "TRRCORP-BION เป็นระบบการจัดซื้อวัตถุดิบพลังงานชีวภาพและระบบบริหารจัดการห่วงโซ่อุปทานระดับองค์กร พัฒนาโดยใช้ Backend ที่มีความปลอดภัยสูงด้วย .NET (C#) ร่วมกับฐานข้อมูล SQL Server ประสิทธิภาพสูง จัดการขั้นตอนการรับชั่งวัตถุดิบขาลเข้า, ขั้นตอนการจัดซื้อการค้า, การตรวจสอบข้อมูลความถูกต้องผ่าน Stored Procedures และการแจ้งเตือนความจุที่เก็บเชื้อเพลิงแบบเรียลไทม์",
+      "repo": "",
+      "images": [
+        "bion1.png"
+      ],
+      "bullets_en": [
+        "Developed backend services using C# (.NET) with SQL Server, designed stored procedures with business rules, and implemented notification features for capacity monitoring."
+      ],
+      "bullets_th": [
+        "พัฒนา Backend services ด้วย C# (.NET) กับ SQL Server ออกแบบ stored procedures และระบบแจ้งเตือนอัตโนมัติ"
+      ],
+      "tags": [
+        "C# (.NET)",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": "ols",
+      "category_en": "LOGISTICS MOBILE APP",
+      "category_th": "LOGISTICS MOBILE APP",
+      "title_en": "TRRCORP-OLS",
+      "title_th": "TRRCORP-OLS",
+      "desc_en": "Outbound Logistics Mobile System",
+      "desc_th": "Outbound Logistics Mobile System",
+      "readme_en": "TRRCORP-OLS is a cross-platform outbound logistics and dispatch tracker mobile application. Developed using Flutter for the mobile client and secure .NET backend APIs, this system manages real-time weighing logs (weight-in/weight-out records), performs automatic net cargo weight calculations, and allows seamless offline operations in environments with low network connectivity.",
+      "readme_th": "TRRCORP-OLS เป็นแอปพลิเคชันมือถือสำหรับระบบการติดตามโลจิสติกส์และการส่งออกสินค้า พัฒนาด้วย Flutter ในส่วนหน้าบ้าน และเชื่อมต่อระบบหลังบ้านผ่าน .NET APIs จัดการบันทึกข้อมูลการชั่งน้ำหนักขาลเข้าและขาออก (Weight-in/Weight-out logs) คำนวณน้ำหนักสุทธิของสินค้าโดยอัตโนมัติ และรองรับการทำงานในโหมดออฟไลน์เพื่อความต่อเนื่องในพื้นที่อับสัญญาณ",
+      "repo": "",
+      "images": [
+        "ols1.png"
+      ],
+      "bullets_en": [
+        "Developed Flutter-based mobile application connected to .NET backend APIs, with weight-in/weight-out management, net weight calculation, and system deployment testing."
+      ],
+      "bullets_th": [
+        "พัฒนาแอปมือถือด้วย Flutter เชื่อมต่อ .NET backend APIs จัดการ weight-in/weight-out และคำนวณน้ำหนักสุทธิ"
+      ],
+      "tags": [
+        "Flutter",
+        ".NET API"
+      ]
+    },
+    {
+      "id": "clickword",
+      "category_en": "EDUCATIONAL GAME",
+      "category_th": "EDUCATIONAL GAME",
+      "title_en": "CLICK WORD",
+      "title_th": "CLICK WORD",
+      "desc_en": "Web-Based Educational Game",
+      "desc_th": "Web-Based Educational Game",
+      "readme_en": "Click Word is an interactive browser-based educational word game. Built with HTML5, CSS3, and vanilla JavaScript, it challenges users with quick-paced vocabulary card matching, interactive feedback states, and dynamic level scaling. Designed with gamification and micro-interactions to maximize user engagement and accessibility.",
+      "readme_th": "Click Word เป็นเกมคำศัพท์เพื่อการศึกษาแบบโต้ตอบบนเว็บ พัฒนาด้วย HTML5, CSS3 และ JavaScript แท้ ท้าทายผู้เล่นด้วยเกมจับคู่คำศัพท์และคำแปลที่สนุกสนาน มีระบบคะแนนสะสมและระดับเลเวลความยากที่ปรับเปลี่ยนได้ ออกแบบโดยเน้น Gamification และการตอบสนองที่ลื่นไหล เพื่อเพิ่มความสนุกสนานและการเข้าถึงสำหรับผู้เรียนทุกกลุ่ม",
+      "repo": "https://github.com/WarisaTT/Clickword",
+      "images": [
+        "clickword1.png"
+      ],
+      "bullets_en": [
+        "Developed a browser-based vocabulary game using HTML, CSS, and JavaScript with word matching, scoring system, and interactive feedback.",
+        "Designed intuitive UX/UI with focus on engagement, accessibility, and clean interface layout."
+      ],
+      "bullets_th": [
+        "พัฒนาเกมคำศัพท์บนบราวเซอร์ด้วย HTML, CSS และ JavaScript พร้อมระบบจับคู่และเก็บคะแนน",
+        "ออกแบบ UX/UI ที่เน้นความสนุก เข้าถึงง่าย และหน้าตาสะอาด"
+      ],
+      "tags": [
+        "JavaScript",
+        "HTML/CSS",
+        "UX/UI"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "time_1779877542483",
+      "type": "education",
+      "title_en": "Student",
+      "title_th": "นักเรียน",
+      "subtitle_en": "Suankularbwittayalai Rangsit School (SKR)",
+      "subtitle_th": "โรงเรียนสวนกุหลาบวิทยาลัย รังสิต (สกร.)",
+      "date_en": "May 2019 - May 2021",
+      "date_th": "พ.ค. 2019 - พ.ค. 2021",
+      "description_en": "",
+      "description_th": "",
+      "bullets_en": [],
+      "bullets_th": []
+    },
+    {
+      "id": "exp_1",
+      "type": "education",
+      "title_en": "Bachelor of Science (IT)",
+      "title_th": "การศึกษา (ปริญญาตรี)",
+      "subtitle_en": "King Mongkut's University of Technology Thonburi (KMUTT)",
+      "subtitle_th": "King Mongkut's University of Technology Thonburi (KMUTT)",
+      "date_en": "2022 - 2026",
+      "date_th": "2022 - 2026",
+      "description_en": "4th Year student in Information Technology / Computer Science.",
+      "description_th": "คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) ชั้นปีที่ 4",
+      "bullets_en": [],
+      "bullets_th": []
+    },
+    {
+      "id": "exp_2",
+      "type": "work",
+      "title_en": "Software Developer Intern",
+      "title_th": "Software Developer Intern",
+      "subtitle_en": "Lin Sugar (Sugar Factory Enterprise System)",
+      "subtitle_th": "Lin Sugar (Sugar Factory Enterprise System)",
+      "date_en": "Jan 2025 - Jul 2025",
+      "date_th": "ม.ค. 2025 - ก.ค. 2025",
+      "description_en": "",
+      "description_th": "",
+      "bullets_en": [
+        "Co-developed a comprehensive Enterprise System for a large-scale sugar factory (Full SDLC).",
+        "Backend: C# (.NET) | Mobile: Flutter | Database: SQL Server"
+      ],
+      "bullets_th": [
+        "พัฒนา Enterprise System ขนาดใหญ่ (Full SDLC) สำหรับโรงงานน้ำตาล",
+        "Backend: C# (.NET) | Mobile: Flutter | Database: SQL Server"
+      ]
+    },
+    {
+      "id": "exp_3",
+      "type": "work",
+      "title_en": "Software Engineer (Part-time)",
+      "title_th": "Software Engineer (Part-time)",
+      "subtitle_en": "Automate-2015 (Robotics & Automation)",
+      "subtitle_th": "Automate-2015 (Robotics & Automation)",
+      "date_en": "Oct 2025 - Present",
+      "date_th": "ต.ค. 2025 - ปัจจุบัน",
+      "description_en": "",
+      "description_th": "",
+      "bullets_en": [
+        "Design and develop Machine Vision systems for industrial robotic arms using C# and VB.",
+        "Develop control software to optimize industrial manufacturing processes and automation."
+      ],
+      "bullets_th": [
+        "ออกแบบระบบ Machine Vision (C#, VB) สำหรับแขนกลและการควบคุมระบบอัตโนมัติ",
+        "พัฒนาซอฟต์แวร์ควบคุมเพื่อเพิ่มประสิทธิภาพในกระบวนการผลิต"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert_1",
+      "title_en": "Gemini Certified Educator",
+      "title_th": "Gemini Certified Educator",
+      "desc_en": "Google Cloud Certification for AI Workflow Optimization.",
+      "desc_th": "Google Cloud Certification สำหรับการเพิ่มประสิทธิภาพ Workflow ด้วย AI",
+      "img": "cert-gemini-edu.png"
+    },
+    {
+      "id": "cert_2",
+      "title_en": "Gemini Certified Faculty",
+      "title_th": "Gemini Certified Faculty",
+      "desc_en": "Strategic AI implementation and responsible usage certification.",
+      "desc_th": "การนำ AI ไปใช้อย่างมีกลยุทธ์และรับผิดชอบ",
+      "img": "cert-gemini-faculty.png"
+    }
+  ],
+  "polaroid_strip": [
+    {
+      "id": "pstrip_1",
+      "img": "IMG_2835.jpeg",
+      "caption_th": "เรียนรู้และเติบโต",
+      "caption_en": "Learning and Growing",
+      "tape": "tape-yellow",
+      "rotate": "-3deg"
+    },
+    {
+      "id": "pstrip_2",
+      "img": "IMG_2836.jpeg",
+      "caption_th": "ค้นพบสิ่งใหม่ๆ",
+      "caption_en": "Exploring New Things",
+      "tape": "tape-pink",
+      "rotate": "3deg"
+    },
+    {
+      "id": "pstrip_3",
+      "img": "IMG_2838.jpeg",
+      "caption_th": "พัฒนาตัวเองเสมอ",
+      "caption_en": "Always Improving",
+      "tape": "tape-green",
+      "rotate": "-2deg"
+    }
+  ],
+  "contact": {
+    "email": "fair2708@gmail.com",
+    "phone": "097-094-8781",
+    "address_th": "ปทุมธานี, ประเทศไทย",
+    "address_en": "Pathum Thani, Thailand",
+    "postcard_title_th": "ถึง: คุณ!",
+    "postcard_title_en": "To: You!",
+    "postcard_text_th": "พร้อมเติบโตไปกับองค์กรและสร้างสิ่งที่มีความหมาย ติดต่อมาได้เลย!",
+    "postcard_text_en": "Ready to grow with the organization and create something meaningful let's connect!"
+  },
+  "socials": {
+    "logo_text": "Garfair",
+    "github_url": "https://github.com/WarisaTT",
+    "linkedin_url": "https://www.linkedin.com/in/warisa-thiamthong/",
+    "copyright_en": "2026 Warisa Thiamthong. Built for GitHub Pages.",
+    "copyright_th": "2026 วริษา เทียมทอง. Built for GitHub Pages."
+  },
+  "skills": [
+    {
+      "id": "skill_1",
+      "icon": "fa-server",
+      "title_en": "Backend & System Architecture",
+      "title_th": "Backend & System Architecture",
+      "items": [
+        {
+          "name_en": "Golang (Fiber)",
+          "name_th": "Golang (Fiber)",
+          "icon": "fab fa-golang",
+          "color": "#00ADD8"
+        },
+        {
+          "name_en": "C# (.NET 8)",
+          "name_th": "C# (.NET 8)",
+          "icon": "fab fa-microsoft",
+          "color": "#512BD4"
+        },
+        {
+          "name_en": "Java Spring Boot",
+          "name_th": "Java Spring Boot",
+          "icon": "fab fa-java",
+          "color": "#007396"
+        },
+        {
+          "name_en": "RESTful API Design",
+          "name_th": "RESTful API Design",
+          "icon": "fas fa-project-diagram",
+          "color": ""
+        },
+        {
+          "name_en": "MVC Architecture",
+          "name_th": "MVC Architecture",
+          "icon": "fas fa-cubes",
+          "color": ""
+        },
+        {
+          "name_en": "Scalable System Design",
+          "name_th": "Scalable System Design",
+          "icon": "fas fa-network-wired",
+          "color": ""
+        },
+        {
+          "name_en": "API Structure Planning",
+          "name_th": "API Structure Planning",
+          "icon": "fas fa-map",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "id": "skill_2",
+      "icon": "fa-database",
+      "title_en": "Database & Data Engineering",
+      "title_th": "Database & Data Engineering",
+      "items": [
+        {
+          "name_en": "SQL Server",
+          "name_th": "SQL Server",
+          "icon": "fas fa-database",
+          "color": "#F80000"
+        },
+        {
+          "name_en": "MySQL 8 (JSON)",
+          "name_th": "MySQL 8 (JSON)",
+          "icon": "fas fa-database",
+          "color": "#4479A1"
+        },
+        {
+          "name_en": "Redis (Cache/Rate Limit)",
+          "name_th": "Redis (Cache/Rate Limit)",
+          "icon": "fas fa-bolt",
+          "color": "#DC382D"
+        },
+        {
+          "name_en": "Stored Procedures",
+          "name_th": "Stored Procedures",
+          "icon": "fas fa-code",
+          "color": ""
+        },
+        {
+          "name_en": "ER Diagram Design",
+          "name_th": "ER Diagram Design",
+          "icon": "fas fa-sitemap",
+          "color": ""
+        },
+        {
+          "name_en": "Query Optimization",
+          "name_th": "Query Optimization",
+          "icon": "fas fa-tachometer-alt",
+          "color": ""
+        },
+        {
+          "name_en": "Data Validation",
+          "name_th": "Data Validation",
+          "icon": "fas fa-check-double",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "id": "skill_3",
+      "icon": "fa-shield-halved",
+      "title_en": "Auth, Security & API Governance",
+      "title_th": "Auth, Security & API Governance",
+      "items": [
+        {
+          "name_en": "OAuth2 / OpenID Connect",
+          "name_th": "OAuth2 / OpenID Connect",
+          "icon": "fas fa-key",
+          "color": ""
+        },
+        {
+          "name_en": "JWT Authentication",
+          "name_th": "JWT Authentication",
+          "icon": "fas fa-user-lock",
+          "color": ""
+        },
+        {
+          "name_en": "Firebase Auth",
+          "name_th": "Firebase Auth",
+          "icon": "fas fa-fire",
+          "color": "#FFCA28"
+        },
+        {
+          "name_en": "Token Verification",
+          "name_th": "Token Verification",
+          "icon": "fas fa-fingerprint",
+          "color": ""
+        },
+        {
+          "name_en": "RBAC",
+          "name_th": "RBAC",
+          "icon": "fas fa-user-tag",
+          "color": ""
+        },
+        {
+          "name_en": "Secure API Principles",
+          "name_th": "Secure API Principles",
+          "icon": "fas fa-lock",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "id": "skill_4",
+      "icon": "fa-robot",
+      "title_en": "Robotics & Industrial Automation",
+      "title_th": "Robotics & Industrial Automation",
+      "items": [
+        {
+          "name_en": "Camera Programming",
+          "name_th": "Camera Programming",
+          "icon": "fas fa-camera",
+          "color": ""
+        },
+        {
+          "name_en": "Vision Machine & Pattern Matching",
+          "name_th": "Vision Machine & Pattern Matching",
+          "icon": "fas fa-eye",
+          "color": ""
+        },
+        {
+          "name_en": "Robot Training & Calibration",
+          "name_th": "Robot Training & Calibration",
+          "icon": "fas fa-tools",
+          "color": ""
+        },
+        {
+          "name_en": "XY Coordinate Positioning",
+          "name_th": "XY Coordinate Positioning",
+          "icon": "fas fa-crosshairs",
+          "color": ""
+        },
+        {
+          "name_en": "System Integration",
+          "name_th": "System Integration",
+          "icon": "fas fa-industry",
+          "color": ""
+        },
+        {
+          "name_en": "Factory Deployment",
+          "name_th": "Factory Deployment",
+          "icon": "fas fa-cogs",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "id": "skill_5",
+      "icon": "fa-layer-group",
+      "title_en": "Full Stack & System Integration",
+      "title_th": "Full Stack & System Integration",
+      "items": [
+        {
+          "name_en": "HTML/CSS/JS",
+          "name_th": "HTML/CSS/JS",
+          "icon": "fab fa-html5",
+          "color": "#E34F26"
+        },
+        {
+          "name_en": "Vue.js 3 (Pinia)",
+          "name_th": "Vue.js 3 (Pinia)",
+          "icon": "fab fa-vuejs",
+          "color": "#4FC08D"
+        },
+        {
+          "name_en": "Flutter",
+          "name_th": "Flutter",
+          "icon": "fab fa-flutter",
+          "color": "#00ADD8"
+        },
+        {
+          "name_en": "UX/UI (Figma)",
+          "name_th": "UX/UI (Figma)",
+          "icon": "fab fa-figma",
+          "color": "#F24E1E"
+        },
+        {
+          "name_en": "Docker Compose",
+          "name_th": "Docker Compose",
+          "icon": "fab fa-docker",
+          "color": "#2496ED"
+        },
+        {
+          "name_en": "Nginx",
+          "name_th": "Nginx",
+          "icon": "fas fa-server",
+          "color": ""
+        },
+        {
+          "name_en": "CI/CD (GitHub Actions)",
+          "name_th": "CI/CD (GitHub Actions)",
+          "icon": "fab fa-github",
+          "color": ""
+        },
+        {
+          "name_en": "Vercel / Railway",
+          "name_th": "Vercel / Railway",
+          "icon": "fas fa-cloud",
+          "color": ""
+        },
+        {
+          "name_en": "Postman",
+          "name_th": "Postman",
+          "icon": "fas fa-envelope-open-text",
+          "color": "#FF6C37"
+        }
+      ]
+    },
+    {
+      "id": "skill_6",
+      "icon": "fa-wand-magic-sparkles",
+      "title_en": "AI Tools & Prompt Engineering",
+      "title_th": "AI Tools & Prompt Engineering",
+      "items": [
+        {
+          "name_en": "LLM API (OpenAI, Gemini)",
+          "name_th": "LLM API (OpenAI, Gemini)",
+          "icon": "fas fa-brain",
+          "color": ""
+        },
+        {
+          "name_en": "GitHub Copilot",
+          "name_th": "GitHub Copilot",
+          "icon": "fab fa-github",
+          "color": ""
+        },
+        {
+          "name_en": "Claude / Antigravity",
+          "name_th": "Claude / Antigravity",
+          "icon": "fas fa-robot",
+          "color": ""
+        },
+        {
+          "name_en": "Workflow Automation",
+          "name_th": "Workflow Automation",
+          "icon": "fas fa-magic",
+          "color": ""
+        },
+        {
+          "name_en": "Notion AI / Grammarly",
+          "name_th": "Notion AI / Grammarly",
+          "icon": "fas fa-lightbulb",
+          "color": ""
+        },
+        {
+          "name_en": "Perplexity",
+          "name_th": "Perplexity",
+          "icon": "fas fa-search",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "id": "skill_7",
+      "icon": "fa-user-tie",
+      "title_en": "Professional Skills",
+      "title_th": "Professional Skills",
+      "items": [
+        {
+          "name_en": "Cross-functional Teamwork",
+          "name_th": "Cross-functional Teamwork",
+          "icon": "fas fa-users",
+          "color": ""
+        },
+        {
+          "name_en": "Technical Communication",
+          "name_th": "Technical Communication",
+          "icon": "fas fa-comments",
+          "color": ""
+        },
+        {
+          "name_en": "Client Presentation",
+          "name_th": "Client Presentation",
+          "icon": "fas fa-person-chalkboard",
+          "color": ""
+        },
+        {
+          "name_en": "Fast-Paced Adaptability",
+          "name_th": "Fast-Paced Adaptability",
+          "icon": "fas fa-sync",
+          "color": ""
+        },
+        {
+          "name_en": "Leadership & Ownership",
+          "name_th": "Leadership & Ownership",
+          "icon": "fas fa-crown",
+          "color": ""
+        },
+        {
+          "name_en": "Growth Mindset",
+          "name_th": "Growth Mindset",
+          "icon": "fas fa-seedling",
+          "color": ""
+        },
+        {
+          "name_en": "AI Tools Integration",
+          "name_th": "AI Tools Integration",
+          "icon": "fas fa-brain",
+          "color": ""
+        }
+      ]
+    }
+  ]
+}
