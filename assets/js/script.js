@@ -1,6 +1,11 @@
 // Theme Toggle Logic
 const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'dark';
+let currentTheme = 'dark';
+try {
+    currentTheme = localStorage.getItem('theme') || 'dark';
+} catch (e) {
+    console.warn('localStorage is not accessible:', e);
+}
 
 document.documentElement.setAttribute('data-theme', currentTheme);
 
@@ -10,7 +15,11 @@ if (themeToggle) {
         let newTheme = theme === 'dark' ? 'light' : 'dark';
         
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+        try {
+            localStorage.setItem('theme', newTheme);
+        } catch (e) {
+            console.warn('localStorage is not accessible:', e);
+        }
     });
 }
 
