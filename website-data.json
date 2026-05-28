@@ -51,7 +51,7 @@
       "repo": "https://github.com/WarisaTT/jobspark-project",
       "other_link": "https://bscit.sit.kmutt.ac.th/capstone25/cp25pl3",
       "other_link_label_en": "Live Demo",
-      "other_link_label_th": "ลิงก์เว็บ",
+      "other_link_label_th": "ดูเว็บไซต์",
       "tags": [
         "Golang",
         "Fiber",
@@ -264,6 +264,9 @@
       "desc_en": "Web-Based Educational Game",
       "desc_th": "Web-Based Educational Game",
       "repo": "https://github.com/WarisaTT/Clickword",
+      "other_link": "https://glittery-bubblegum-fa9384.netlify.app/",
+      "other_link_label_en": "Live Demo",
+      "other_link_label_th": "ดูเว็บไซต์",
       "tags": [
         "JavaScript",
         "HTML/CSS",
