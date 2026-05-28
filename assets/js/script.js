@@ -154,9 +154,9 @@ reveal();
                 const isThai = document.documentElement.lang === 'th';
                 
                 if (repo) {
-                    const repoLabel = isThai ? 'GitHub Repository' : 'GitHub Repository';
+                    const repoLabel = 'GitHub';
                     modalActions.innerHTML += `
-                        <a href="${repo}" target="_blank" class="modal-btn github-btn" style="display: flex;">
+                        <a href="${repo}" target="_blank" class="modal-btn github-btn">
                             <i class="fab fa-github"></i> ${repoLabel}
                         </a>`;
                 }
@@ -175,7 +175,7 @@ reveal();
                     }
                     
                     modalActions.innerHTML += `
-                        <a href="${otherLink}" target="_blank" class="modal-btn" style="display: flex; background: var(--accent); color: var(--text-white); font-weight: 700; border-color: var(--accent);">
+                        <a href="${otherLink}" target="_blank" class="modal-btn live-btn">
                             <i class="${iconClass}"></i> ${otherLabel}
                         </a>`;
                 }

@@ -127,7 +127,7 @@ function generateHeroHTML(profile, isThai) {
                 <h1>${nameHTML}</h1>
                 <div class="hero-role-line" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                     <span style="color: var(--text-muted); font-size: 1.1rem; font-weight: 500;">${iBuiltText}</span>
-                    <span id="hero-typing" style="color: var(--primary-light); font-size: 1.2rem; font-weight: 700; border-right: 2px solid var(--primary-light); padding-right: 4px; min-width: 180px;"></span>
+                    <span id="hero-typing" style="color: var(--primary-light); font-size: 1.2rem; font-weight: 700; min-width: 180px;"></span>
                 </div>
                 <p>${subtitle}</p>
                 <div class="hero-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;">

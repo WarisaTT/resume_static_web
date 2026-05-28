@@ -40,7 +40,6 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--nav-height);
-    transition: background-color 0.3s ease;
 }
 
 body {
@@ -49,7 +48,6 @@ body {
     color: var(--text-gray);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 h1, h2 {
@@ -501,31 +499,48 @@ nav {
     box-shadow: 0 4px 8px rgba(124, 58, 237, 0.15) !important;
 }
 .modal-actions {
+    display: flex;
+    gap: 1rem;
     margin-top: auto;
+    width: 100%;
 }
 .modal-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    flex: 1;
     width: 100%;
-    padding: 0.8rem;
-    border-radius: 10px;
+    padding: 0.8rem 0.5rem;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.9rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    white-space: nowrap;
 }
 .github-btn {
-    background: linear-gradient(135deg, var(--primary) 0%, #2e2a87 100%);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
 }
 .github-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px -8px rgba(79, 70, 229, 0.6);
-    border-color: var(--primary-light);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.55);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.live-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #0f172a !important;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+.live-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 900px) {
@@ -708,7 +723,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-size: clamp(3.2rem, 5.5vw, 5.2rem);
     margin-bottom: 1.8rem;
     font-weight: 900;
     line-height: 1.1;
@@ -1165,11 +1180,14 @@ section {
     }
 
     .hero h1 {
-        font-size: clamp(1.8rem, 10vw, 2.5rem);
+        font-size: clamp(2.2rem, 11vw, 3.2rem);
         overflow-wrap: break-word;
         word-break: break-word;
         hyphens: auto;
         line-height: 1.1;
+    }
+    html[lang="en"] .hero h1 {
+        font-size: clamp(2.6rem, 12vw, 3.8rem);
     }
 
     .hero p {
@@ -1203,7 +1221,7 @@ section {
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin: 2rem auto 1.5rem auto !important; /* Tighter margins and centered */
     }
 
@@ -1334,7 +1352,10 @@ section {
 /* ==================== Small Mobile ==================== */
 @media (max-width: 400px) {
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+    }
+    html[lang="en"] .hero h1 {
+        font-size: 2.8rem;
     }
 
     .hero p {
@@ -1355,7 +1376,7 @@ section {
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin: 1.5rem auto 1rem auto !important;
     }
 
@@ -1518,7 +1539,7 @@ body {
 /* Section Title - Marker Underline */
 .section-title {
     font-family: 'Caveat', 'Mali', cursive;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: var(--primary);
     text-align: center;
     margin: 5rem auto 4.5rem auto;
@@ -1823,10 +1844,11 @@ body {
 }
 
 [data-theme="dark"] .scrapbook-postcard {
-    background: #27272A;
+    background-color: #27272A;
     border-color: rgba(255, 255, 255, 0.06);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 100% 24px;
 }
 
 .postcard-message {
@@ -2000,8 +2022,9 @@ body {
 @media (max-width: 900px) {
     .hero-image {
         width: 320px !important;
-        height: 330px !important;
+        height: 270px !important;
         margin-top: 1.5rem !important;
+        margin-bottom: -1.2rem !important;
     }
     .hero-image .scrapbook-polaroid {
         width: 170px !important;
