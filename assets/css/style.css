@@ -242,7 +242,7 @@ nav {
     pointer-events: all;
 }
 .modal-backdrop {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -539,14 +539,15 @@ nav {
         flex-direction: column;
         height: auto;
         max-height: none;
-        overflow: visible;
+        overflow: hidden; /* Retain rounded corners on mobile */
     }
     .modal-gallery {
         flex: none;
         height: auto;
         border-right: none;
-        border-bottom: 1px solid var(--glass-border);
+        border-bottom: 2px dashed var(--glass-border); /* Beautiful notebook dashed line separator */
         padding: 1rem;
+        background: var(--bg-card); /* Unified background with the info card on mobile */
     }
     .modal-hero-container {
         height: 250px;
@@ -575,14 +576,17 @@ nav {
         padding-right: 0;
     }
     .modal-close-btn {
-        top: 10px;
-        right: 10px;
+        position: fixed; /* Keep close button fixed so it doesn't scroll away */
+        top: 1rem;
+        right: 1rem;
         background: var(--bg-card);
         color: var(--text-white);
         border: 2px solid var(--primary);
-        width: 32px;
-        height: 32px;
-        font-size: 1.2rem;
+        width: 38px;
+        height: 38px;
+        font-size: 1.4rem;
+        z-index: 2100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -1069,10 +1073,29 @@ section {
         padding-top: calc(var(--nav-height) + 2rem);
     }
 
+    .hero::before {
+        display: none !important; /* Hide red notebook margin lines on responsive screens */
+    }
+
     .hero-content { order: 2; }
 
     .hero-image {
         order: 1;
+        justify-content: center !important;
+    }
+
+    .hero-tags {
+        justify-content: center !important;
+    }
+
+    .hero-content > div:last-child {
+        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+    }
+
+    .hero-content > div:last-child > div:last-child {
         justify-content: center !important;
     }
 
@@ -1117,14 +1140,22 @@ section {
         text-align: center;
         gap: 1.2rem;
         min-height: auto;
-        padding-top: 140px !important; /* Forces enough space on any mobile device */
+        padding-top: 90px !important; /* Tighter spacing below navigation bar */
         padding-bottom: 2rem;
+    }
+
+    .hero::before {
+        display: none !important; /* Hide red notebook margin lines on mobile */
     }
 
     .hero-content {
         order: 2;
         overflow-wrap: break-word;
         word-break: break-word;
+    }
+
+    .hero-role-line {
+        justify-content: center !important; /* Center the typing role text line on mobile */
     }
 
     .hero-image {
@@ -1151,13 +1182,13 @@ section {
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem !important;
-        margin-bottom: 2rem;
+        margin-bottom: 0 !important;
     }
 
     .status-badge {
         justify-content: center;
         font-size: 0.75rem;
-        margin-top: 2rem; /* Increased top margin to prevent catching the floating frame */
+        margin-top: 0.5rem; /* Reduced top margin as the floating frame issue is fixed */
         margin-bottom: 1rem;
     }
 
@@ -2034,6 +2065,7 @@ body {
     height: 2px;
     background-color: var(--text-white);
     border-radius: 2px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2048,6 +2080,7 @@ body {
     height: 2px;
     background-color: var(--text-white);
     border-radius: 2px;
+    left: 0;
     transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 

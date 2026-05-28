@@ -285,6 +285,54 @@
         "modeSelection.png",
         "rankBoardpage.png"
       ]
+    },
+    {
+      "id": "proj_1779946880444",
+      "title_en": "MapMe",
+      "title_th": "MapMe",
+      "category_en": "AI INTEGRATED",
+      "category_th": "AI INTEGRATED",
+      "desc_en": "Web application for internal office navigation with real-world maps and 360° viewing support.",
+      "desc_th": "Web Application สำหรับระบบนำทางภายในองค์กร พร้อมแผนที่โลกจริงและการแสดงผลภาพ 360 องศาแบบ Pri",
+      "repo": "https://github.com/WarisaTT/MapMe",
+      "other_link": "",
+      "other_link_label_en": "",
+      "other_link_label_th": "",
+      "tags": [
+        "C#",
+        ".NET 7",
+        "ASP.NET Core MVC",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap 5",
+        "Leaflet.js",
+        "Pannellum",
+        "JSON",
+        "OpenStreetMap"
+      ],
+      "readme_en": "MapMe is a web application designed for Internal Office Navigation, combining real-world mapping with immersive 360-degree visualization similar to Google Street View. Unlike public mapping platforms, MapMe is built as a private mapping solution to support organizational security and PDPA compliance, allowing all location data and 360° images to be uploaded and managed entirely by internal staff. Users can create custom pins, add location details, and explore spaces through a real-time 360° Viewer experience. The platform also includes Embed & Share functionality, enabling maps to be integrated seamlessly into external websites or dashboards such as Power BI. Developed using C# .NET 7, ASP.NET Core MVC, Leaflet.js, and Pannellum, the system currently utilizes JSON File Storage while remaining fully scalable for future enterprise database integration with SQL Server or Oracle.",
+      "readme_th": "MapMe คือ Web Application สำหรับสร้างระบบนำทางภายในองค์กร (Internal Office Navigation) ที่ผสานแผนที่โลกจริงเข้ากับการแสดงภาพ 360 องศา เสมือน Google Street View แต่ถูกออกแบบให้เป็น Private Map เพื่อรองรับด้านความปลอดภัยและ PDPA โดยข้อมูลทั้งหมดสามารถอัปโหลดและจัดการได้โดยบุคลากรภายในองค์กรเอง ผู้ใช้สามารถปักหมุด เพิ่มรายละเอียดสถานที่ และดูภาพรอบทิศทางผ่านระบบ 360° Viewer ได้แบบเรียลไทม์ พร้อมฟีเจอร์ Embed & Share สำหรับนำแผนที่ไปใช้งานร่วมกับเว็บไซต์หรือ Dashboard เช่น Power BI ตัวระบบพัฒนาด้วย C# .NET 7, ASP.NET Core MVC, Leaflet.js และ Pannellum โดยใช้ JSON File Storage ที่สามารถต่อยอดสู่ฐานข้อมูลระดับ Enterprise อย่าง SQL Server หรือ Oracle ได้ในอนาคต",
+      "bullets_en": [
+        "Developed a private internal office navigation system with real-world map integration using Leaflet.js and OpenStreetMap",
+        "Implemented interactive pin management and 360° panoramic viewing with Pannellum for immersive location exploration",
+        "Built embed and fullscreen sharing features for integration with dashboards and external websites such as Power BI",
+        "Designed the backend with ASP.NET Core MVC and JSON-based storage architecture scalable to SQL Server or Oracle"
+      ],
+      "bullets_th": [
+        "พัฒนาระบบนำทางภายในองค์กรแบบ Private Map ด้วย Leaflet.js และ OpenStreetMap",
+        "สร้างระบบปักหมุดและแสดงภาพ 360 องศาด้วย Pannellum เพื่อจำลองการเดินสำรวจสถานที่เสมือนจริง",
+        "พัฒนาฟีเจอร์ Embed และ Fullscreen Map สำหรับใช้งานร่วมกับ Dashboard และเว็บไซต์ภายนอก เช่น Power BI",
+        "ออกแบบ Backend ด้วย ASP.NET Core MVC และโครงสร้างจัดเก็บข้อมูลแบบ JSON ที่รองรับการต่อยอดสู่ SQL Server หรือ Oracle"
+      ],
+      "images": [
+        "Screenshot_2026-05-28_at_12.45.07.png",
+        "Screenshot_2026-05-28_at_12.45.17.png",
+        "Screenshot_2026-05-28_at_12.45.30.png",
+        "Screenshot_2026-05-28_at_12.47.06.png",
+        "Screenshot_2026-05-28_at_12.47.31.png",
+        "FlowApp.png"
+      ]
     }
   ],
   "experience": [

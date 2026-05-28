@@ -27,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Serve static project files so they can access assets and see previews
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use(express.static(__dirname, { index: false }));
 
 const DATA_FILE = path.join(__dirname, 'website-data.json');
 const INDEX_HTML = path.join(__dirname, 'index.html');
@@ -2673,5 +2674,7 @@ app.listen(PORT, () => {
     console.log(`\n==================================================`);
     console.log(`🎨 Warisa Portfolio CMS System is active!`);
     console.log(`👉 Open http://localhost:${PORT} in your browser`);
+    console.log(`👉 View your English Resume: http://localhost:${PORT}/index.html`);
+    console.log(`👉 View your Thai Resume: http://localhost:${PORT}/th.html`);
     console.log(`==================================================\n`);
 });
