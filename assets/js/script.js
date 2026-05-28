@@ -342,3 +342,33 @@ reveal();
     }
     tick();
 })();
+
+// Mobile Nav Menu Toggle
+(function() {
+    const toggleBtn = document.getElementById('mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== toggleBtn) {
+                toggleBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking links
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+})();

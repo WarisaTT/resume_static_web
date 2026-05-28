@@ -1997,4 +1997,185 @@ body {
     }
 }
 
+/* ==================== SCRAPBOOK MOBILE MENU & NAVIGATION ==================== */
+
+/* Desktop hide toggle */
+.mobile-nav-toggle {
+    display: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--card-shadow);
+}
+
+.mobile-nav-toggle:hover {
+    border-color: var(--primary-light);
+    transform: scale(1.05);
+}
+
+.mobile-nav-toggle-box {
+    width: 20px;
+    height: 14px;
+    position: relative;
+    display: inline-block;
+}
+
+.mobile-nav-toggle-inner {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: var(--text-white);
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.mobile-nav-toggle-inner::before,
+.mobile-nav-toggle-inner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: var(--text-white);
+    border-radius: 2px;
+    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.mobile-nav-toggle-inner::before {
+    top: -6px;
+}
+
+.mobile-nav-toggle-inner::after {
+    bottom: -6px;
+}
+
+/* Toggle Active State Animations */
+.mobile-nav-toggle.active .mobile-nav-toggle-inner {
+    transform: rotate(225deg);
+    transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.mobile-nav-toggle.active .mobile-nav-toggle-inner::before {
+    top: 0;
+    opacity: 0;
+}
+
+.mobile-nav-toggle.active .mobile-nav-toggle-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Mobile Media Query Rules */
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: flex;
+    }
+
+    /* Transform nav-links into a notebook page sliding down */
+    .nav-links {
+        display: flex !important; /* Force flex override */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        background: var(--bg-main);
+        
+        /* Notebook Ruled lines matching theme colors */
+        background-image: linear-gradient(var(--paper-border) 1px, transparent 1px);
+        background-size: 100% 40px; 
+        
+        padding: 3.5rem 2rem;
+        gap: 1.8rem;
+        z-index: 999;
+        transform: translateY(-160%);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        border-bottom: 3px dashed var(--primary);
+        pointer-events: none; /* Ignore interactions when hidden */
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-15px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger transitions for notebook feel */
+    .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.active li:nth-child(2) { transition-delay: 0.15s; }
+    .nav-links.active li:nth-child(3) { transition-delay: 0.2s; }
+    .nav-links.active li:nth-child(4) { transition-delay: 0.25s; }
+    .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
+
+    .nav-links a {
+        display: inline-block;
+        font-family: 'Caveat', 'Mali', cursive !important;
+        font-size: 1.8rem !important;
+        color: var(--text-white) !important;
+        padding: 0.5rem 1.5rem;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        background: var(--glass-border);
+        color: var(--primary-light) !important;
+        transform: scale(1.05) rotate(1deg);
+    }
+}
+
+/* Fix structural hero stacking issue */
+@media (max-width: 1024px) {
+    .hero .container {
+        flex-direction: column !important;
+        gap: 2.5rem !important;
+        align-items: center !important;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        gap: 1.5rem !important;
+    }
+}
+
+/* Prevent polaroid horizontal overflows on narrow devices */
+@media (max-width: 360px) {
+    .hero-image {
+        transform: scale(0.85);
+        margin: -1.5rem 0 !important;
+    }
+}
+
 
