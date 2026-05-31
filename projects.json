@@ -78,6 +78,52 @@
     ]
   },
   {
+    "id": "getgitai",
+    "title_en": "GetGitAI",
+    "title_th": "GetGitAI",
+    "category_en": "AI INTEGRATED",
+    "category_th": "AI INTEGRATED",
+    "desc_en": "AI-Powered Git Intelligence Platform",
+    "desc_th": "AI-Powered Git Intelligence Platform",
+    "repo": "https://github.com/WarisaTT/GetGitAI",
+    "other_link": "",
+    "other_link_label_en": "",
+    "other_link_label_th": "",
+    "tags": [
+      "Python",
+      "Streamlit",
+      "ChromaDB",
+      "Ollama",
+      "GitPython",
+      "Plotly"
+    ],
+    "readme_en": "GetGitAI is an offline-first, AI-powered Git repository intelligence platform. It analyzes Git commit histories using local Semantic Search and Ollama LLM reasoning. Featuring an interactive development velocity dashboard, full risk-score commit inspector, file evolution tracker, and context-aware Repo Chat (RAG) — it operates 100% locally on your machine for maximum security and data privacy.",
+    "readme_th": "GetGitAI เป็นแพลตฟอร์มวิเคราะห์และทำความเข้าใจประวัติการพัฒนา Git ออฟไลน์ในเครื่อง 100% เพื่อความปลอดภัยสูงสุดของข้อมูล ทำงานโดยใช้เทคโนโลยี Semantic Search ค้นหาประวัติโค้ดด้วยภาษาธรรมชาติ และวิเคราะห์เชิงลึกด้วย Local LLM (Ollama) มาพร้อมแดชบอร์ดภาพรวม กราฟความเร็วในการพัฒนา ระบบวิเคราะห์ความเสี่ยงของแต่ละ Commit และฟีเจอร์ Repo Chat ถาม-ตอบประวัติโค้ด",
+    "bullets_en": [
+      "Developed a local-first Git history analysis platform using Python, Streamlit, and GitPython.",
+      "Built a Semantic Search engine using ChromaDB and Sentence Transformers to query commits in natural language.",
+      "Integrated Ollama (Local LLM) for secure, offline repository analysis, risk assessment, and chat-based query answering (RAG).",
+      "Designed an interactive Git intelligence dashboard featuring Plotly development velocity charts and activity timelines.",
+      "Implemented automated AI report generation including Changelogs, update summaries, and risk analysis reports."
+    ],
+    "bullets_th": [
+      "พัฒนาแพลตฟอร์มวิเคราะห์ประวัติ Git แบบ Local-first ด้วย Python, Streamlit และ GitPython",
+      "สร้างระบบ Semantic Search โดยใช้ ChromaDB และ Sentence Transformers เพื่อค้นหา Commit ด้วยภาษาธรรมชาติ",
+      "เชื่อมต่อ Ollama (Local LLM) ในเครื่อง เพื่อวิเคราะห์โค้ดอย่างปลอดภัยแบบออฟไลน์ พร้อมระบบถาม-ตอบประวัติโค้ด (RAG)",
+      "ออกแบบแดชบอร์ดภาพรวม Git แบบตอบสนอง รวมถึงกราฟความเร็วในการพัฒนาด้วย Plotly และกิจกรรมไทม์ไลน์",
+      "สร้างระบบสรุปรายงานอัตโนมัติด้วย AI เช่น การสร้าง Changelog สรุปการอัปเดต และประเมินความเสี่ยงราย Commit"
+    ],
+    "images": [
+      "getgitai_logo.png",
+      "getgitai_welcome.png",
+      "getgitai_dashboard.png",
+      "getgitai_graph.png",
+      "getgitai_tracker.png",
+      "getgitai_file_detail.png",
+      "getgitai_summary.png"
+    ]
+  },
+  {
     "id": "kradankanban",
     "category_en": "WEB APPLICATION",
     "category_th": "WEB APPLICATION",
