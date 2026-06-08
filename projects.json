@@ -114,6 +114,7 @@
       "สร้างระบบสรุปรายงานอัตโนมัติด้วย AI เช่น การสร้าง Changelog สรุปการอัปเดต และประเมินความเสี่ยงราย Commit"
     ],
     "images": [
+      "getgitai_cover.png",
       "getgitai_logo.png",
       "getgitai_welcome.png",
       "getgitai_dashboard.png",
