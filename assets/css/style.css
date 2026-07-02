@@ -416,6 +416,23 @@ nav {
     letter-spacing: 0.5px;
     pointer-events: none;
 }
+.vibe-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: linear-gradient(135deg, #7928ca, #ff0080);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 2;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(255, 0, 128, 0.35);
+}
 .modal-thumbnails {
     flex-shrink: 0; /* Protect thumbnail height */
     display: flex;

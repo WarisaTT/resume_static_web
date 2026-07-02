@@ -131,9 +131,9 @@ function generateHeroHTML(profile, isThai) {
                 </div>
                 <p>${subtitle}</p>
                 <div class="hero-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;">
-                    <span class="hero-tag"><i class="fab fa-python"></i> Python</span>
-                    <span class="hero-tag"><i class="fab fa-react"></i> React</span>
-                    <span class="hero-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="hero-tag"><i class="fab fa-golang"></i> GoLang</span>
+                    <span class="hero-tag"><i class="fab fa-react"></i> Next.js</span>
+                    <span class="hero-tag"><i class="fas fa-database"></i> SQL</span>
                     <span class="hero-tag"><i class="fas fa-brain"></i> AI/ML</span>
                     <span class="hero-tag"><i class="fas fa-infinity"></i> CI/CD</span>
                 </div>
@@ -276,6 +276,11 @@ function generateProjectsHTML(projects, isThai) {
             categoryTag = `<span style="font-size: 0.7rem; color: ${colorVar}; font-weight: 800; letter-spacing: 1px; margin-bottom: 1rem; display: block;">${category}</span>`;
         }
 
+        let vibeBadge = '';
+        if (p.id === 'proj_1779946880444' || p.id === 'getgitai' || p.id === 'ploykong' || (p.title_en && p.title_en.toLowerCase() === 'mapme')) {
+            vibeBadge = `<span class="vibe-badge"><i class="fas fa-bolt"></i> Vibe Coding</span>`;
+        }
+
         const bullets = isThai ? p.bullets_th : p.bullets_en;
         const bulletsHTML = bullets.map(b => `                    <li>${b}</li>`).join('\n');
         const tagsHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join(' ');
@@ -304,6 +309,7 @@ function generateProjectsHTML(projects, isThai) {
         return `            <div class="glass-card project-card" data-images="${imagesStr}" data-readme="${readmeEscaped}" data-category="${categoryEscaped}"${repoAttr}${otherLinkAttr}>
                 <div class="project-image-wrapper">
                     ${imageTag}
+                    ${vibeBadge}
                 </div>
                 ${categoryTag}
                 <h3>${title}</h3>

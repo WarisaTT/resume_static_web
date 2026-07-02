@@ -12,8 +12,8 @@
     "cv_link_en": "assets/pdf/Resume_Warisa_ENG.pdf",
     "about_title_th": "เกี่ยวกับฉัน",
     "about_title_en": "About Me",
-    "about_text_th": "นักศึกษาชั้นปีสุดท้าย สาขา IT จาก มจธ. มีประสบการณ์จริงจากการฝึกงานและพัฒนาซอฟต์แวร์แบบ Outsource ทั้งด้าน Web Application, Automation และ Robotics หลงใหลในการออกแบบระบบ ตั้งแต่ CI/CD Pipeline, Monitoring ด้วย Grafana ไปจนถึง Security Testing ด้วย OWASP ZAP สำหรับดิฉัน AI คือตัวช่วยทางความคิดที่ขยายศักยภาพมนุษย์ ไม่ใช่สิ่งทดแทน",
-    "about_text_en": "Final-year IT student at KMUTT with real-world experience from internships and outsource development in web applications, automation, and robotics systems. Passionate about system design from CI/CD pipelines and monitoring with Grafana, to security testing with OWASP ZAP. I see AI not as a replacement, but as a thinking partner that amplifies human capability while maintaining strong technical judgment.",
+    "about_text_th": "บัณฑิตสาขา IT จาก มจธ. มีประสบการณ์จริงจากการฝึกงานและพัฒนาซอฟต์แวร์แบบ Outsource ทั้งด้าน Web Application, Automation และ Robotics หลงใหลในการออกแบบระบบ ตั้งแต่ CI/CD Pipeline, Monitoring ด้วย Grafana ไปจนถึง Security Testing ด้วย OWASP ZAP สำหรับดิฉัน AI คือตัวช่วยทางความคิดที่ขยายศักยภาพมนุษย์ ไม่ใช่สิ่งทดแทน",
+    "about_text_en": "IT graduate from KMUTT with real-world experience from internships and outsource development in web applications, automation, and robotics systems. Passionate about system design from CI/CD pipelines and monitoring with Grafana, to security testing with OWASP ZAP. I see AI not as a replacement, but as a thinking partner that amplifies human capability while maintaining strong technical judgment.",
     "about_img": "IMG_2823.jpeg",
     "about_caption_th": "ค้นคว้าไอเดียใหม่ๆ",
     "about_caption_en": "Exploring ideas",
@@ -219,6 +219,9 @@
       "desc_en": "Industrial Automation Project",
       "desc_th": "Industrial Automation Project",
       "repo": "",
+      "other_link": "",
+      "other_link_label_en": "",
+      "other_link_label_th": "",
       "tags": [
         "C#",
         "VB",
@@ -236,7 +239,11 @@
       ],
       "images": [
         "Screenshot_2026-05-28_at_01.30.38.png",
-        "robotics1.png"
+        "robotics1.png",
+        "IMG_6692.jpeg",
+        "IMG_6048 2.JPG",
+        "IMG_6047 2.JPG",
+        "IMG_5190.jpeg"
       ]
     },
     {
@@ -387,14 +394,34 @@
   ],
   "experience": [
     {
+      "id": "exp_4",
+      "type": "work",
+      "title_en": "Software Engineer",
+      "title_th": "Software Engineer",
+      "subtitle_en": "Promes Co., Ltd. (AI & Big Data Solutions)",
+      "subtitle_th": "บริษัท โพรเมซส์ จำกัด (AI & Big Data Solutions)",
+      "date_en": "Jul 2026 - Present",
+      "date_th": "ก.ค. 2026 - ปัจจุบัน",
+      "description_en": "",
+      "description_th": "",
+      "bullets_en": [
+        "Develop and maintain enterprise AI solutions, such as NLP-based News & Research Summarization systems.",
+        "Develop and integrate web applications, data pipelines, and real-time visualization dashboards."
+      ],
+      "bullets_th": [
+        "พัฒนาและดูแลระบบโซลูชัน AI สำหรับองค์กร เช่น ระบบสรุปข่าวและงานวิจัยอัตโนมัติด้วยเทคโนโลยี NLP",
+        "พัฒนาและเชื่อมต่อเว็บแอปพลิเคชัน, ระบบข้อมูล (Data Pipelines) และ Dashboard แสดงผลข้อมูลแบบเรียลไทม์"
+      ]
+    },
+    {
       "id": "exp_3",
       "type": "work",
       "title_en": "Software Engineer (Part-time)",
       "title_th": "Software Engineer (Part-time)",
       "subtitle_en": "Automate-2015 (Robotics & Automation)",
       "subtitle_th": "Automate-2015 (Robotics & Automation)",
-      "date_en": "Oct 2025 - Present",
-      "date_th": "ต.ค. 2025 - ปัจจุบัน",
+      "date_en": "Oct 2025 - May 2026",
+      "date_th": "ต.ค. 2025 - พ.ค. 2026",
       "description_en": "",
       "description_th": "",
       "bullets_en": [
@@ -435,8 +462,8 @@
       "subtitle_th": "King Mongkut's University of Technology Thonburi (KMUTT)",
       "date_en": "July 2022 - July 2026",
       "date_th": "ก.ค. 2022 - ก.ค. 2026",
-      "description_en": "4th Year student in Information Technology / Computer Science.",
-      "description_th": "คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) ชั้นปีที่ 4",
+      "description_en": "Information Technology / Computer Science Graduate. (GPA: 3.03)",
+      "description_th": "คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) (GPA: 3.03)",
       "bullets_en": [],
       "bullets_th": []
     },
