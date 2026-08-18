@@ -125,6 +125,39 @@
     ]
   },
   {
+    "id": "promes_ai",
+    "title_en": "PROMES AI & ENTERPRISE PLATFORM",
+    "title_th": "PROMES AI & ENTERPRISE PLATFORM",
+    "category_en": "AI INTEGRATED",
+    "category_th": "AI INTEGRATED",
+    "desc_en": "AI Speech-to-Text & Form Auto-fill (FDA) and Unified Enterprise System",
+    "desc_th": "ระบบ AI ถอดความและสรุปข้อมูลเอกสารอัตโนมัติ (FDA Speech-to-Text & Form Auto-fill) และระบบ Enterprise ภายในองค์กร",
+    "repo": "",
+    "tags": [
+      "Kubernetes (K8s)",
+      "AI/LLM",
+      "Speech-to-Text",
+      "Python",
+      "Enterprise System"
+    ],
+    "readme_en": "Promes AI & Enterprise Platform is an internal corporate solutions suite developed at Promes Co., Ltd. Key features include an AI/LLM Speech-to-Text pipeline created for the Food and Drug Administration (FDA/อย.) to transcribe audio recordings and automatically populate structured testimony forms and document templates. Utilized Kubernetes (K8s) and Docker for container orchestration and cloud deployment. In addition, it consolidates legacy internal enterprise applications — including Timesheet, Expense Reimbursement, HR management, and Course modules — into a unified, high-efficiency enterprise platform.",
+    "readme_th": "PROMES AI & ENTERPRISE PLATFORM เป็นโปรเจกต์พัฒนาระบบ AI และ Enterprise ร่วมกับ บริษัท โพรเมซส์ จำกัด ได้แก่ ระบบประยุกต์ใช้ AI/LLM ถอดความบันทึกคลิปเสียง (Speech-to-Text) สำหรับสำนักงานคณะกรรมการอาหารและยา (อย.) โดยนำเสียงถอดความมาประมวลผลเพื่อสรุปและกรอกแบบฟอร์มคำให้การหรือเอกสารตามหัวข้อต่างๆ โดยอัตโนมัติ พร้อมการประยุกต์ใช้งาน Kubernetes (K8s) สำหรับจัดการ Container Orchestration และ Deployment ของระบบองค์กร รวมถึงการพัฒนาระบบ Enterprise ภายในองค์กร (Internal Project) ที่พัฒนาครอบบนระบบเดิม โดยรวมระบบ Timesheet, ระบบเบิกจ่าย, ระบบ HR และระบบคอร์สอบรม เข้าไว้ด้วยกันในแพลตฟอร์มเดียว",
+    "bullets_en": [
+      "Developed AI/LLM audio transcription (Speech-to-Text) solutions for FDA (อย.) to summarize audio logs and auto-fill testimony forms and structured documents.",
+      "Implemented Kubernetes (K8s) and Docker for container orchestration, deployment, and cloud cluster management.",
+      "Consolidated legacy internal enterprise tools including Timesheet, Reimbursement, HR, and Training modules into a unified enterprise platform."
+    ],
+    "bullets_th": [
+      "พัฒนานวัตกรรม AI/LLM สำหรับระบบถอดความบันทึกคลิปเสียง (Speech-to-Text) ของสำนักงานคณะกรรมการอาหารและยา (อย.) เพื่อสรุปและกรอกแบบฟอร์มคำให้การและเอกสารอัตโนมัติตามหัวข้อที่กำหนด",
+      "ประยุกต์ใช้งาน Kubernetes (K8s) ในการจัดการ Container Orchestration และระบบ Deployment ของโซลูชันองค์กร",
+      "พัฒนาระบบ Enterprise ภายในองค์กร (Internal Project) โดยรวมระบบเดิม ได้แก่ ระบบ Timesheet, ระบบเบิกจ่าย, ระบบ HR และระบบคอร์สอบรม เข้าไว้ด้วยกันในแพลตฟอร์มเดียว"
+    ],
+    "images": [
+      "Promesui1.png",
+      "Promesui2.png"
+    ]
+  },
+  {
     "id": "kradankanban",
     "category_en": "WEB APPLICATION",
     "category_th": "WEB APPLICATION",

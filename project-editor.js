@@ -229,6 +229,15 @@ function generateTimelineHTML(experience, isThai) {
         const date = isThai ? item.date_th : item.date_en;
         const desc = isThai ? item.description_th : item.description_en;
         const bullets = isThai ? item.bullets_th : item.bullets_en;
+        const logo = item.logo || '';
+
+        let logoHTML = '';
+        if (logo) {
+            logoHTML = `<div class="exp-logo-badge"><img src="${logo}" alt="${subtitle || title}" class="exp-logo-img"></div>`;
+        } else {
+            const iconClass = item.type === 'education' ? 'fas fa-graduation-cap' : 'fas fa-briefcase';
+            logoHTML = `<div class="exp-logo-badge exp-logo-fallback"><i class="${iconClass}"></i></div>`;
+        }
 
         let detailsHTML = '';
         if (bullets && bullets.length > 0) {
@@ -241,12 +250,15 @@ function generateTimelineHTML(experience, isThai) {
         return `            <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="glass-card">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: flex-start;">
-                        <div>
-                            <h3 style="color: var(--primary-light)">${title}</h3>
-                            <h4 style="margin-top: 5px;">${subtitle}</h4>
+                    <div class="exp-card-header">
+                        ${logoHTML}
+                        <div class="exp-card-info">
+                            <div class="exp-card-title-group">
+                                <h3 style="color: var(--primary-light)">${title}</h3>
+                                <h4 style="margin-top: 4px;">${subtitle}</h4>
+                            </div>
+                            <span class="exp-date-badge">${date}</span>
                         </div>
-                        <span style="color: var(--text-muted)">${date}</span>
                     </div>
 ${detailsHTML}
                 </div>

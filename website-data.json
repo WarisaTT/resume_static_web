@@ -175,6 +175,42 @@
       ]
     },
     {
+      "id": "promes_ai",
+      "title_en": "PROMES AI & ENTERPRISE PLATFORM",
+      "title_th": "PROMES AI & ENTERPRISE PLATFORM",
+      "category_en": "AI INTEGRATED",
+      "category_th": "AI INTEGRATED",
+      "desc_en": "AI Speech-to-Text & Form Auto-fill (FDA) and Unified Enterprise System",
+      "desc_th": "ระบบ AI ถอดความและสรุปข้อมูลเอกสารอัตโนมัติ (FDA Speech-to-Text & Form Auto-fill) และระบบ Enterprise ภายในองค์กร",
+      "repo": "",
+      "other_link": "",
+      "other_link_label_en": "",
+      "other_link_label_th": "",
+      "tags": [
+        "Kubernetes (K8s)",
+        "AI/LLM",
+        "Speech-to-Text",
+        "Python",
+        "Enterprise System"
+      ],
+      "readme_en": "Promes AI & Enterprise Platform is an internal corporate solutions suite developed at Promes Co., Ltd. Key features include an AI/LLM Speech-to-Text pipeline created for the Food and Drug Administration (FDA/อย.) to transcribe audio recordings and automatically populate structured testimony forms and document templates. Utilized Kubernetes (K8s) and Docker for container orchestration and cloud deployment. In addition, it consolidates legacy internal enterprise applications — including Timesheet, Expense Reimbursement, HR management, and Course modules — into a unified, high-efficiency enterprise platform.",
+      "readme_th": "PROMES AI & ENTERPRISE PLATFORM เป็นโปรเจกต์พัฒนาระบบ AI และ Enterprise ร่วมกับ บริษัท โพรเมซส์ จำกัด ได้แก่ ระบบประยุกต์ใช้ AI/LLM ถอดความบันทึกคลิปเสียง (Speech-to-Text) สำหรับสำนักงานคณะกรรมการอาหารและยา (อย.) โดยนำเสียงถอดความมาประมวลผลเพื่อสรุปและกรอกแบบฟอร์มคำให้การหรือเอกสารตามหัวข้อต่างๆ โดยอัตโนมัติ พร้อมการประยุกต์ใช้งาน Kubernetes (K8s) สำหรับจัดการ Container Orchestration และ Deployment ของระบบองค์กร รวมถึงการพัฒนาระบบ Enterprise ภายในองค์กร (Internal Project) ที่พัฒนาครอบบนระบบเดิม โดยรวมระบบ Timesheet, ระบบเบิกจ่าย, ระบบ HR และระบบคอร์สอบรม เข้าไว้ด้วยกันในแพลตฟอร์มเดียว",
+      "bullets_en": [
+        "Developed AI/LLM audio transcription (Speech-to-Text) solutions for FDA (อย.) to summarize audio logs and auto-fill testimony forms and structured documents.",
+        "Implemented Kubernetes (K8s) and Docker for container orchestration, deployment, and cloud cluster management.",
+        "Consolidated legacy internal enterprise tools including Timesheet, Reimbursement, HR, and Training modules into a unified enterprise platform."
+      ],
+      "bullets_th": [
+        "พัฒนานวัตกรรม AI/LLM สำหรับระบบถอดความบันทึกคลิปเสียง (Speech-to-Text) ของสำนักงานคณะกรรมการอาหารและยา (อย.) เพื่อสรุปและกรอกแบบฟอร์มคำให้การและเอกสารอัตโนมัติตามหัวข้อที่กำหนด",
+        "ประยุกต์ใช้งาน Kubernetes (K8s) ในการจัดการ Container Orchestration และระบบ Deployment ของโซลูชันองค์กร",
+        "พัฒนาระบบ Enterprise ภายในองค์กร (Internal Project) โดยรวมระบบเดิม ได้แก่ ระบบ Timesheet, ระบบเบิกจ่าย, ระบบ HR และระบบคอร์สอบรม เข้าไว้ด้วยกันในแพลตฟอร์มเดียว"
+      ],
+      "images": [
+        "Promesui1.png",
+        "Promesui2.png"
+      ]
+    },
+    {
       "id": "kradankanban",
       "title_en": "KRADANKANBAN",
       "title_th": "KRADANKANBAN",
@@ -394,28 +430,51 @@
   ],
   "experience": [
     {
+      "id": "exp_5",
+      "type": "work",
+      "logo": "assets/images/LOGO/kiatnakin-phatra-bank--600.png",
+      "title_en": "Software Engineer - Custodian",
+      "title_th": "Software Engineer - Custodian",
+      "subtitle_en": "Kiatnakin Phatra Financial Group (KKP) - Corporate Solutions System",
+      "subtitle_th": "กลุ่มธุรกิจการเงินเกียรตินาคินภัทร (KKP) - สายงาน IT ทีม Corporate Solutions System",
+      "date_en": "Aug 2026 - Present",
+      "date_th": "16 ส.ค. 2026 - ปัจจุบัน",
+      "description_en": "",
+      "description_th": "",
+      "bullets_en": [
+        "Software Engineer - Custodian in the Corporate Solutions System team (Information Technology Group), responsible for Custodian and Fund Management systems.",
+        "Studying and developing enterprise banking solutions and financial tech infrastructure for Kiatnakin Phatra Financial Group."
+      ],
+      "bullets_th": [
+        "ดำรงตำแหน่ง Software Engineer - Custodian ในทีม Corporate Solutions System (สายงาน Information Technology) รับผิดชอบพัฒนาระบบงานกองทุน (Custodian System)",
+        "ศึกษา เรียนรู้ และพัฒนาระบบ Enterprise Banking และโซลูชันทางการเงินระดับองค์กรสำหรับกลุ่มธุรกิจการเงินเกียรตินาคินภัทร"
+      ]
+    },
+    {
       "id": "exp_4",
       "type": "work",
+      "logo": "assets/images/LOGO/promes_myanmar_logo.jpeg",
       "title_en": "Software Engineer",
       "title_th": "Software Engineer",
       "subtitle_en": "Promes Co., Ltd. (AI & Big Data Solutions)",
       "subtitle_th": "บริษัท โพรเมซส์ จำกัด (AI & Big Data Solutions)",
-      "date_en": "Jul 2026 - Present",
-      "date_th": "ก.ค. 2026 - ปัจจุบัน",
+      "date_en": "Jul 2026 - 11 Aug 2026",
+      "date_th": "ก.ค. 2026 - 11 ส.ค. 2026",
       "description_en": "",
       "description_th": "",
       "bullets_en": [
-        "Develop and maintain enterprise AI solutions, such as NLP-based News & Research Summarization systems.",
-        "Develop and integrate web applications, data pipelines, and real-time visualization dashboards."
+        "Developed and integrated AI/LLM Speech-to-Text transcription models for the Food and Drug Administration (FDA/อย.) to automatically summarize audio recordings into testimony forms and structured documents.",
+        "Gained hands-on experience in enterprise systems by consolidating legacy internal tools (Timesheet, Expense Reimbursement, HR systems, and Course Management) into a unified platform."
       ],
       "bullets_th": [
-        "พัฒนาและดูแลระบบโซลูชัน AI สำหรับองค์กร เช่น ระบบสรุปข่าวและงานวิจัยอัตโนมัติด้วยเทคโนโลยี NLP",
-        "พัฒนาและเชื่อมต่อเว็บแอปพลิเคชัน, ระบบข้อมูล (Data Pipelines) และ Dashboard แสดงผลข้อมูลแบบเรียลไทม์"
+        "พัฒนาและประยุกต์ใช้เทคโนโลยี AI/LLM สำหรับระบบถอดความบันทึกคลิปเสียง (Speech-to-Text) ของสำนักงานคณะกรรมการอาหารและยา (อย.) เพื่อสรุปและกรอกแบบฟอร์มคำให้การและเอกสารอัตโนมัติตามหัวข้อที่กำหนด",
+        "เรียนรู้และพัฒนาระบบ Enterprise (Internal Project) โดยรวมระบบย่อยเดิมขององค์กร เช่น ระบบ Timesheet, ระบบเบิกจ่าย, ระบบ HR และระบบคอร์สอบรม เข้าไว้ด้วยกันในแพลตฟอร์มเดียว"
       ]
     },
     {
       "id": "exp_3",
       "type": "work",
+      "logo": "assets/images/LOGO/automate-2015_LOGO_2.png",
       "title_en": "Software Engineer (Part-time)",
       "title_th": "Software Engineer (Part-time)",
       "subtitle_en": "Automate-2015 (Robotics & Automation)",
@@ -436,6 +495,7 @@
     {
       "id": "exp_2",
       "type": "work",
+      "logo": "assets/images/LOGO/Lin logo.jpg",
       "title_en": "Software Developer Intern",
       "title_th": "Software Developer Intern",
       "subtitle_en": "Lin Sugar (Sugar Factory Enterprise System)",
@@ -456,6 +516,7 @@
     {
       "id": "exp_1",
       "type": "education",
+      "logo": "assets/images/LOGO/KMUTT_CI_Semi_Logo-normal-full-1061x1200.png",
       "title_en": "Bachelor of Science (IT)",
       "title_th": "การศึกษา (ปริญญาตรี)",
       "subtitle_en": "King Mongkut's University of Technology Thonburi (KMUTT)",
@@ -470,6 +531,7 @@
     {
       "id": "time_1779877542483",
       "type": "education",
+      "logo": "assets/images/LOGO/SKR.webp",
       "title_en": "Education (Student)",
       "title_th": "การศึกษา (นักเรียนมัธยมปลาย)",
       "subtitle_en": "Suankularbwittayalai Rangsit School (SKR)",
@@ -735,9 +797,33 @@
     {
       "id": "skill_5",
       "icon": "fa-layer-group",
-      "title_en": "Full Stack & System Integration",
-      "title_th": "Full Stack & System Integration",
+      "title_en": "Cloud, DevOps & Full Stack Integration",
+      "title_th": "Cloud, DevOps & Full Stack Integration",
       "items": [
+        {
+          "name_en": "Kubernetes (K8s)",
+          "name_th": "Kubernetes (K8s)",
+          "icon": "fas fa-dharmachakra",
+          "color": "#326CE5"
+        },
+        {
+          "name_en": "Docker & Containerization",
+          "name_th": "Docker & Containerization",
+          "icon": "fab fa-docker",
+          "color": "#2496ED"
+        },
+        {
+          "name_en": "Nginx",
+          "name_th": "Nginx",
+          "icon": "fas fa-server",
+          "color": "#009639"
+        },
+        {
+          "name_en": "CI/CD (GitHub Actions)",
+          "name_th": "CI/CD (GitHub Actions)",
+          "icon": "fab fa-github",
+          "color": ""
+        },
         {
           "name_en": "HTML/CSS/JS",
           "name_th": "HTML/CSS/JS",
@@ -763,22 +849,10 @@
           "color": "#F24E1E"
         },
         {
-          "name_en": "Docker Compose",
-          "name_th": "Docker Compose",
-          "icon": "fab fa-docker",
-          "color": "#2496ED"
-        },
-        {
-          "name_en": "Nginx",
-          "name_th": "Nginx",
-          "icon": "fas fa-server",
-          "color": ""
-        },
-        {
-          "name_en": "CI/CD (GitHub Actions)",
-          "name_th": "CI/CD (GitHub Actions)",
-          "icon": "fab fa-github",
-          "color": ""
+          "name_en": "Leaflet.js / 360° View",
+          "name_th": "Leaflet.js / 360° View",
+          "icon": "fas fa-map-marked-alt",
+          "color": "#199900"
         },
         {
           "name_en": "Vercel / Railway",
@@ -801,10 +875,22 @@
       "title_th": "AI Tools & Prompt Engineering",
       "items": [
         {
+          "name_en": "Speech-to-Text (STT)",
+          "name_th": "Speech-to-Text (STT)",
+          "icon": "fas fa-microphone-alt",
+          "color": "#E91E63"
+        },
+        {
+          "name_en": "RAG & Vector Search",
+          "name_th": "RAG & Vector Search",
+          "icon": "fas fa-database",
+          "color": "#9C27B0"
+        },
+        {
           "name_en": "LLM API (OpenAI, Gemini)",
           "name_th": "LLM API (OpenAI, Gemini)",
           "icon": "fas fa-brain",
-          "color": ""
+          "color": "#FF9800"
         },
         {
           "name_en": "GitHub Copilot",
@@ -816,13 +902,13 @@
           "name_en": "Claude / Antigravity",
           "name_th": "Claude / Antigravity",
           "icon": "fas fa-robot",
-          "color": ""
+          "color": "#D97706"
         },
         {
           "name_en": "Workflow Automation",
           "name_th": "Workflow Automation",
           "icon": "fas fa-magic",
-          "color": ""
+          "color": "#8B5CF6"
         },
         {
           "name_en": "Notion AI / Grammarly",
@@ -834,7 +920,7 @@
           "name_en": "Perplexity",
           "name_th": "Perplexity",
           "icon": "fas fa-search",
-          "color": ""
+          "color": "#0EA5E9"
         }
       ]
     },
@@ -844,6 +930,12 @@
       "title_en": "Professional Skills",
       "title_th": "Professional Skills",
       "items": [
+        {
+          "name_en": "Custodian & Fund Systems",
+          "name_th": "Custodian & Fund Systems",
+          "icon": "fas fa-coins",
+          "color": "#EAB308"
+        },
         {
           "name_en": "Cross-functional Teamwork",
           "name_th": "Cross-functional Teamwork",
