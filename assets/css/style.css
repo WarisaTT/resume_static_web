@@ -1016,6 +1016,28 @@ section {
     min-width: 200px;
 }
 
+.exp-company-link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.exp-company-link:hover {
+    color: var(--primary-light) !important;
+}
+
+.exp-company-link i {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.exp-company-link:hover i {
+    transform: translate(2px, -2px);
+    opacity: 1 !important;
+}
+
 .exp-date-badge {
     color: var(--text-muted);
     font-size: 0.85rem;

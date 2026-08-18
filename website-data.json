@@ -433,6 +433,7 @@
       "id": "exp_5",
       "type": "work",
       "logo": "assets/images/LOGO/kiatnakin-phatra-bank--600.png",
+      "url": "https://bank.kkpfg.com",
       "title_en": "Software Engineer - Custodian",
       "title_th": "Software Engineer - Custodian",
       "subtitle_en": "Kiatnakin Phatra Financial Group (KKP) - Corporate Solutions System",
@@ -454,6 +455,7 @@
       "id": "exp_4",
       "type": "work",
       "logo": "assets/images/LOGO/promes_myanmar_logo.jpeg",
+      "url": "https://promes.co.th",
       "title_en": "Software Engineer",
       "title_th": "Software Engineer",
       "subtitle_en": "Promes Co., Ltd. (AI & Big Data Solutions)",
@@ -464,10 +466,12 @@
       "description_th": "",
       "bullets_en": [
         "Developed and integrated AI/LLM Speech-to-Text transcription models for the Food and Drug Administration (FDA/อย.) to automatically summarize audio recordings into testimony forms and structured documents.",
+        "Utilized Kubernetes (K8s) and Docker for container orchestration, automated deployment, and enterprise cloud management.",
         "Gained hands-on experience in enterprise systems by consolidating legacy internal tools (Timesheet, Expense Reimbursement, HR systems, and Course Management) into a unified platform."
       ],
       "bullets_th": [
         "พัฒนาและประยุกต์ใช้เทคโนโลยี AI/LLM สำหรับระบบถอดความบันทึกคลิปเสียง (Speech-to-Text) ของสำนักงานคณะกรรมการอาหารและยา (อย.) เพื่อสรุปและกรอกแบบฟอร์มคำให้การและเอกสารอัตโนมัติตามหัวข้อที่กำหนด",
+        "ประยุกต์ใช้งาน Kubernetes (K8s) และ Docker ในการทำ Container Orchestration สำหรับ Deployment และบริหารจัดการคลาวด์องค์กร",
         "เรียนรู้และพัฒนาระบบ Enterprise (Internal Project) โดยรวมระบบย่อยเดิมขององค์กร เช่น ระบบ Timesheet, ระบบเบิกจ่าย, ระบบ HR และระบบคอร์สอบรม เข้าไว้ด้วยกันในแพลตฟอร์มเดียว"
       ]
     },
@@ -475,6 +479,7 @@
       "id": "exp_3",
       "type": "work",
       "logo": "assets/images/LOGO/automate-2015_LOGO_2.png",
+      "url": "http://www.automate-2015.com",
       "title_en": "Software Engineer (Part-time)",
       "title_th": "Software Engineer (Part-time)",
       "subtitle_en": "Automate-2015 (Robotics & Automation)",
@@ -496,6 +501,7 @@
       "id": "exp_2",
       "type": "work",
       "logo": "assets/images/LOGO/Lin logo.jpg",
+      "url": "https://www.trrgroup.com",
       "title_en": "Software Developer Intern",
       "title_th": "Software Developer Intern",
       "subtitle_en": "Lin Sugar (Sugar Factory Enterprise System)",
@@ -517,6 +523,7 @@
       "id": "exp_1",
       "type": "education",
       "logo": "assets/images/LOGO/KMUTT_CI_Semi_Logo-normal-full-1061x1200.png",
+      "url": "https://www.kmutt.ac.th",
       "title_en": "Bachelor of Science (IT)",
       "title_th": "การศึกษา (ปริญญาตรี)",
       "subtitle_en": "King Mongkut's University of Technology Thonburi (KMUTT)",
@@ -532,6 +539,7 @@
       "id": "time_1779877542483",
       "type": "education",
       "logo": "assets/images/LOGO/SKR.webp",
+      "url": "https://www.skr.ac.th",
       "title_en": "Education (Student)",
       "title_th": "การศึกษา (นักเรียนมัธยมปลาย)",
       "subtitle_en": "Suankularbwittayalai Rangsit School (SKR)",
