@@ -65,6 +65,9 @@
 * **โลโก้:** `assets/images/LOGO/KMUTT_CI_Semi_Logo-normal-full-1061x1200.png`
 * **ระยะเวลา:** ก.ค. 2022 - ก.ค. 2026
 * **รายละเอียด:** คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) (GPA: 3.03)
+* **เอกสารสำคัญ (ดาวน์โหลด/เปิดดู):**
+  - [ปริญญาบัตร (Bachelor Certificate)](assets/pdf/CERTIFICATE-BACHELOR.pdf)
+  - [ใบแสดงผลการเรียน (Academic Transcript)](assets/pdf/(Latest)transcript-65130500117-graduated.pdf)
 
 ### 2. การศึกษาระดับมัธยมปลาย
 * **สถานที่:** โรงเรียนสวนกุหลาบวิทยาลัย รังสิต (สกร. / SKR)

@@ -262,6 +262,16 @@ function generateTimelineHTML(experience, isThai) {
             detailsHTML = `                    <p style="color: var(--text-gray);">${desc}</p>`;
         }
 
+        let docsHTML = '';
+        if (item.docs && item.docs.length > 0) {
+            const docBtns = item.docs.map(doc => {
+                const docTitle = isThai ? doc.title_th : doc.title_en;
+                const iconClass = doc.icon || 'fas fa-file-download';
+                return `<a href="${doc.url}" target="_blank" class="exp-doc-btn"><i class="${iconClass}"></i> ${docTitle}</a>`;
+            }).join('\n                        ');
+            docsHTML = `                    <div class="exp-docs-group" style="margin-top: 1.2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">\n                        ${docBtns}\n                    </div>`;
+        }
+
         return `            <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="glass-card">
@@ -276,6 +286,7 @@ function generateTimelineHTML(experience, isThai) {
                         </div>
                     </div>
 ${detailsHTML}
+${docsHTML}
                 </div>
             </div>`;
     }).join('\n\n');

@@ -533,7 +533,21 @@
       "description_en": "Information Technology / Computer Science Graduate. (GPA: 3.03)",
       "description_th": "คณะเทคโนโลยีสารสนเทศ (Information Technology / Computer Science) (GPA: 3.03)",
       "bullets_en": [],
-      "bullets_th": []
+      "bullets_th": [],
+      "docs": [
+        {
+          "title_th": "ปริญญาบัตร (Bachelor Certificate)",
+          "title_en": "Bachelor Certificate",
+          "url": "assets/pdf/CERTIFICATE-BACHELOR.pdf",
+          "icon": "fas fa-award"
+        },
+        {
+          "title_th": "ใบแสดงผลการเรียน (Transcript)",
+          "title_en": "Academic Transcript",
+          "url": "assets/pdf/(Latest)transcript-65130500117-graduated.pdf",
+          "icon": "fas fa-file-invoice"
+        }
+      ]
     },
     {
       "id": "time_1779877542483",
