@@ -1387,7 +1387,7 @@ section {
         height: 12px;
     }
 
-    .experience-timeline .glass-card > div:first-child {
+    .experience-timeline .exp-card-info {
         flex-direction: column !important;
         gap: 0.5rem;
     }

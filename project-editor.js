@@ -233,10 +233,10 @@ function generateTimelineHTML(experience, isThai) {
 
         let logoHTML = '';
         if (logo) {
-            logoHTML = `<div class="exp-logo-badge"><img src="${logo}" alt="${subtitle || title}" class="exp-logo-img"></div>`;
+            logoHTML = `<div class="exp-logo-badge" style="width: 58px; height: 58px; min-width: 58px; max-width: 58px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #ffffff; padding: 6px; border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.12);"><img src="${logo}" alt="${subtitle || title}" class="exp-logo-img" style="max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto; display: block;"></div>`;
         } else {
             const iconClass = item.type === 'education' ? 'fas fa-graduation-cap' : 'fas fa-briefcase';
-            logoHTML = `<div class="exp-logo-badge exp-logo-fallback"><i class="${iconClass}"></i></div>`;
+            logoHTML = `<div class="exp-logo-badge exp-logo-fallback" style="width: 58px; height: 58px; min-width: 58px; max-width: 58px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 14px;"><i class="${iconClass}"></i></div>`;
         }
 
         let detailsHTML = '';
